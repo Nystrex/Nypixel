@@ -32,12 +32,8 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-
   int _currentIndex = 0;
-  final List<Widget> _children = [
-    PlayerPage(),
-    GuildPage()
-  ];
+  final List<Widget> _children = [PlayerPage(), GuildPage()];
 
   @override
   Widget build(BuildContext context) {
@@ -56,12 +52,8 @@ class _MainState extends State<Main> {
               title: Text('Player'),
             ),
             new BottomNavigationBarItem(
-                icon: Icon(Icons.group),
-                title: Text('Guild')
-            )
+                icon: Icon(Icons.group), title: Text('Guild'))
           ],
-        )
-    );
+        ));
   }
 }
-

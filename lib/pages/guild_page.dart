@@ -39,9 +39,9 @@ class _GuildPageState extends State<GuildPage> {
           textFieldHint: "Enter Player Name",
           onSubmit: (val) {
             search(context, val);
-          }), 
-        if (guild != null)
-          Container(
+          }),
+      if (guild != null)
+        Container(
             child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Container(

@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final player = playerFromJson(jsonString);
-
 import 'dart:convert';
 
 class Player {
@@ -70,66 +66,66 @@ class Player {
   String toRawJson() => json.encode(toJson());
 
   factory Player.fromJson(Map<String, dynamic> json) => Player(
-    uuid: json["uuid"],
-    username: json["username"],
-    online: json["online"],
-    rank: json["rank"],
-    rankPlusColor: json["rank_plus_color"],
-    rankFormatted: json["rank_formatted"],
-    prefix: json["prefix"],
-    karma: json["karma"],
-    exp: json["exp"],
-    level: json["level"],
-    achievementPoints: json["achievement_points"],
-    questsCompleted: json["quests_completed"],
-    totalKills: json["total_kills"],
-    totalWins: json["total_wins"],
-    totalCoins: json["total_coins"],
-    mcVersion: json["mc_version"],
-    firstLogin: json["first_login"],
-    lastLogin: json["last_login"],
-    lastLogout: json["last_logout"],
-    lastGame: json["last_game"],
-    language: json["language"],
-    giftsSent: json["gifts_sent"],
-    giftsReceived: json["gifts_received"],
-    isContributor: json["is_contributor"],
-    rewards: Rewards.fromJson(json["rewards"]),
-    voting: Voting.fromJson(json["voting"]),
-    links: Links.fromJson(json["links"]),
-    stats: Stats.fromJson(json["stats"]),
-  );
+        uuid: json["uuid"],
+        username: json["username"],
+        online: json["online"],
+        rank: json["rank"],
+        rankPlusColor: json["rank_plus_color"],
+        rankFormatted: json["rank_formatted"],
+        prefix: json["prefix"],
+        karma: json["karma"],
+        exp: json["exp"],
+        level: json["level"],
+        achievementPoints: json["achievement_points"],
+        questsCompleted: json["quests_completed"],
+        totalKills: json["total_kills"],
+        totalWins: json["total_wins"],
+        totalCoins: json["total_coins"],
+        mcVersion: json["mc_version"],
+        firstLogin: json["first_login"],
+        lastLogin: json["last_login"],
+        lastLogout: json["last_logout"],
+        lastGame: json["last_game"],
+        language: json["language"],
+        giftsSent: json["gifts_sent"],
+        giftsReceived: json["gifts_received"],
+        isContributor: json["is_contributor"],
+        rewards: Rewards.fromJson(json["rewards"]),
+        voting: Voting.fromJson(json["voting"]),
+        links: Links.fromJson(json["links"]),
+        stats: Stats.fromJson(json["stats"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "uuid": uuid,
-    "username": username,
-    "online": online,
-    "rank": rank,
-    "rank_plus_color": rankPlusColor,
-    "rank_formatted": rankFormatted,
-    "prefix": prefix,
-    "karma": karma,
-    "exp": exp,
-    "level": level,
-    "achievement_points": achievementPoints,
-    "quests_completed": questsCompleted,
-    "total_kills": totalKills,
-    "total_wins": totalWins,
-    "total_coins": totalCoins,
-    "mc_version": mcVersion,
-    "first_login": firstLogin,
-    "last_login": lastLogin,
-    "last_logout": lastLogout,
-    "last_game": lastGame,
-    "language": language,
-    "gifts_sent": giftsSent,
-    "gifts_received": giftsReceived,
-    "is_contributor": isContributor,
-    "rewards": rewards.toJson(),
-    "voting": voting.toJson(),
-    "links": links.toJson(),
-    "stats": stats.toJson(),
-  };
+        "uuid": uuid,
+        "username": username,
+        "online": online,
+        "rank": rank,
+        "rank_plus_color": rankPlusColor,
+        "rank_formatted": rankFormatted,
+        "prefix": prefix,
+        "karma": karma,
+        "exp": exp,
+        "level": level,
+        "achievement_points": achievementPoints,
+        "quests_completed": questsCompleted,
+        "total_kills": totalKills,
+        "total_wins": totalWins,
+        "total_coins": totalCoins,
+        "mc_version": mcVersion,
+        "first_login": firstLogin,
+        "last_login": lastLogin,
+        "last_logout": lastLogout,
+        "last_game": lastGame,
+        "language": language,
+        "gifts_sent": giftsSent,
+        "gifts_received": giftsReceived,
+        "is_contributor": isContributor,
+        "rewards": rewards.toJson(),
+        "voting": voting.toJson(),
+        "links": links.toJson(),
+        "stats": stats.toJson(),
+      };
 }
 
 class Links {
@@ -156,24 +152,24 @@ class Links {
   String toRawJson() => json.encode(toJson());
 
   factory Links.fromJson(Map<String, dynamic> json) => Links(
-    twitter: json["TWITTER"],
-    youtube: json["YOUTUBE"],
-    instagram: json["INSTAGRAM"],
-    twitch: json["TWITCH"],
-    mixer: json["MIXER"],
-    discord: json["DISCORD"],
-    hypixel: json["HYPIXEL"],
-  );
+        twitter: json["TWITTER"],
+        youtube: json["YOUTUBE"],
+        instagram: json["INSTAGRAM"],
+        twitch: json["TWITCH"],
+        mixer: json["MIXER"],
+        discord: json["DISCORD"],
+        hypixel: json["HYPIXEL"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "TWITTER": twitter,
-    "YOUTUBE": youtube,
-    "INSTAGRAM": instagram,
-    "TWITCH": twitch,
-    "MIXER": mixer,
-    "DISCORD": discord,
-    "HYPIXEL": hypixel,
-  };
+        "TWITTER": twitter,
+        "YOUTUBE": youtube,
+        "INSTAGRAM": instagram,
+        "TWITCH": twitch,
+        "MIXER": mixer,
+        "DISCORD": discord,
+        "HYPIXEL": hypixel,
+      };
 }
 
 class Rewards {
@@ -196,20 +192,20 @@ class Rewards {
   String toRawJson() => json.encode(toJson());
 
   factory Rewards.fromJson(Map<String, dynamic> json) => Rewards(
-    streakCurrent: json["streak_current"],
-    streakBest: json["streak_best"],
-    claimed: json["claimed"],
-    claimedDaily: json["claimed_daily"],
-    tokens: json["tokens"],
-  );
+        streakCurrent: json["streak_current"],
+        streakBest: json["streak_best"],
+        claimed: json["claimed"],
+        claimedDaily: json["claimed_daily"],
+        tokens: json["tokens"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "streak_current": streakCurrent,
-    "streak_best": streakBest,
-    "claimed": claimed,
-    "claimed_daily": claimedDaily,
-    "tokens": tokens,
-  };
+        "streak_current": streakCurrent,
+        "streak_best": streakBest,
+        "claimed": claimed,
+        "claimed_daily": claimedDaily,
+        "tokens": tokens,
+      };
 }
 
 class Stats {
@@ -244,32 +240,32 @@ class Stats {
   String toRawJson() => json.encode(toJson());
 
   factory Stats.fromJson(Map<String, dynamic> json) => Stats(
-    arcade: Arcade.fromJson(json["Arcade"]),
-    arena: Arena.fromJson(json["Arena"]),
-    warlords: Duels.fromJson(json["Warlords"]),
-    bedWars: BedWars.fromJson(json["BedWars"]),
-    buildBattle: BuildBattle.fromJson(json["BuildBattle"]),
-    duels: Duels.fromJson(json["Duels"]),
-    tkr: Tkr.fromJson(json["TKR"]),
-    blitz: Blitz.fromJson(json["Blitz"]),
-    cvC: CvC.fromJson(json["CvC"]),
-    murderMystery: Duels.fromJson(json["MurderMystery"]),
-    pit: Pit.fromJson(json["Pit"]),
-  );
+        arcade: Arcade.fromJson(json["Arcade"]),
+        arena: Arena.fromJson(json["Arena"]),
+        warlords: Duels.fromJson(json["Warlords"]),
+        bedWars: BedWars.fromJson(json["BedWars"]),
+        buildBattle: BuildBattle.fromJson(json["BuildBattle"]),
+        duels: Duels.fromJson(json["Duels"]),
+        tkr: Tkr.fromJson(json["TKR"]),
+        blitz: Blitz.fromJson(json["Blitz"]),
+        cvC: CvC.fromJson(json["CvC"]),
+        murderMystery: Duels.fromJson(json["MurderMystery"]),
+        pit: Pit.fromJson(json["Pit"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "Arcade": arcade.toJson(),
-    "Arena": arena.toJson(),
-    "Warlords": warlords.toJson(),
-    "BedWars": bedWars.toJson(),
-    "BuildBattle": buildBattle.toJson(),
-    "Duels": duels.toJson(),
-    "TKR": tkr.toJson(),
-    "Blitz": blitz.toJson(),
-    "CvC": cvC.toJson(),
-    "MurderMystery": murderMystery.toJson(),
-    "Pit": pit.toJson(),
-  };
+        "Arcade": arcade.toJson(),
+        "Arena": arena.toJson(),
+        "Warlords": warlords.toJson(),
+        "BedWars": bedWars.toJson(),
+        "BuildBattle": buildBattle.toJson(),
+        "Duels": duels.toJson(),
+        "TKR": tkr.toJson(),
+        "Blitz": blitz.toJson(),
+        "CvC": cvC.toJson(),
+        "MurderMystery": murderMystery.toJson(),
+        "Pit": pit.toJson(),
+      };
 }
 
 class Arcade {
@@ -310,38 +306,38 @@ class Arcade {
   String toRawJson() => json.encode(toJson());
 
   factory Arcade.fromJson(Map<String, dynamic> json) => Arcade(
-    coins: json["coins"],
-    blockingDead: BlockingDead.fromJson(json["blocking_dead"]),
-    dragonwars: Dragonwars.fromJson(json["dragonwars"]),
-    hypixelSays: Says.fromJson(json["hypixel_says"]),
-    santaSays: Says.fromJson(json["santa_says"]),
-    miniwalls: Miniwalls.fromJson(json["miniwalls"]),
-    partyGames: PartyGames.fromJson(json["party_games"]),
-    bountyHunters: BountyHunters.fromJson(json["bounty_hunters"]),
-    galaxyWars: GalaxyWars.fromJson(json["galaxy_wars"]),
-    farmHunt: FarmHunt.fromJson(json["farm_hunt"]),
-    football: Football.fromJson(json["football"]),
-    creeperAttack: CreeperAttack.fromJson(json["creeper_attack"]),
-    holeInTheWall: HoleInTheWall.fromJson(json["hole_in_the_wall"]),
-    zombies: Zombies.fromJson(json["zombies"]),
-  );
+        coins: json["coins"],
+        blockingDead: BlockingDead.fromJson(json["blocking_dead"]),
+        dragonwars: Dragonwars.fromJson(json["dragonwars"]),
+        hypixelSays: Says.fromJson(json["hypixel_says"]),
+        santaSays: Says.fromJson(json["santa_says"]),
+        miniwalls: Miniwalls.fromJson(json["miniwalls"]),
+        partyGames: PartyGames.fromJson(json["party_games"]),
+        bountyHunters: BountyHunters.fromJson(json["bounty_hunters"]),
+        galaxyWars: GalaxyWars.fromJson(json["galaxy_wars"]),
+        farmHunt: FarmHunt.fromJson(json["farm_hunt"]),
+        football: Football.fromJson(json["football"]),
+        creeperAttack: CreeperAttack.fromJson(json["creeper_attack"]),
+        holeInTheWall: HoleInTheWall.fromJson(json["hole_in_the_wall"]),
+        zombies: Zombies.fromJson(json["zombies"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "blocking_dead": blockingDead.toJson(),
-    "dragonwars": dragonwars.toJson(),
-    "hypixel_says": hypixelSays.toJson(),
-    "santa_says": santaSays.toJson(),
-    "miniwalls": miniwalls.toJson(),
-    "party_games": partyGames.toJson(),
-    "bounty_hunters": bountyHunters.toJson(),
-    "galaxy_wars": galaxyWars.toJson(),
-    "farm_hunt": farmHunt.toJson(),
-    "football": football.toJson(),
-    "creeper_attack": creeperAttack.toJson(),
-    "hole_in_the_wall": holeInTheWall.toJson(),
-    "zombies": zombies.toJson(),
-  };
+        "coins": coins,
+        "blocking_dead": blockingDead.toJson(),
+        "dragonwars": dragonwars.toJson(),
+        "hypixel_says": hypixelSays.toJson(),
+        "santa_says": santaSays.toJson(),
+        "miniwalls": miniwalls.toJson(),
+        "party_games": partyGames.toJson(),
+        "bounty_hunters": bountyHunters.toJson(),
+        "galaxy_wars": galaxyWars.toJson(),
+        "farm_hunt": farmHunt.toJson(),
+        "football": football.toJson(),
+        "creeper_attack": creeperAttack.toJson(),
+        "hole_in_the_wall": holeInTheWall.toJson(),
+        "zombies": zombies.toJson(),
+      };
 }
 
 class BlockingDead {
@@ -355,21 +351,22 @@ class BlockingDead {
     this.headshots,
   });
 
-  factory BlockingDead.fromRawJson(String str) => BlockingDead.fromJson(json.decode(str));
+  factory BlockingDead.fromRawJson(String str) =>
+      BlockingDead.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory BlockingDead.fromJson(Map<String, dynamic> json) => BlockingDead(
-    wins: json["wins"],
-    zombieKills: json["zombie_kills"],
-    headshots: json["headshots"],
-  );
+        wins: json["wins"],
+        zombieKills: json["zombie_kills"],
+        headshots: json["headshots"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "zombie_kills": zombieKills,
-    "headshots": headshots,
-  };
+        "wins": wins,
+        "zombie_kills": zombieKills,
+        "headshots": headshots,
+      };
 }
 
 class BountyHunters {
@@ -385,23 +382,24 @@ class BountyHunters {
     this.bountyKills,
   });
 
-  factory BountyHunters.fromRawJson(String str) => BountyHunters.fromJson(json.decode(str));
+  factory BountyHunters.fromRawJson(String str) =>
+      BountyHunters.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory BountyHunters.fromJson(Map<String, dynamic> json) => BountyHunters(
-    wins: json["wins"],
-    kills: json["kills"],
-    deaths: json["deaths"],
-    bountyKills: json["bounty_kills"],
-  );
+        wins: json["wins"],
+        kills: json["kills"],
+        deaths: json["deaths"],
+        bountyKills: json["bounty_kills"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "kills": kills,
-    "deaths": deaths,
-    "bounty_kills": bountyKills,
-  };
+        "wins": wins,
+        "kills": kills,
+        "deaths": deaths,
+        "bounty_kills": bountyKills,
+      };
 }
 
 class CreeperAttack {
@@ -411,17 +409,18 @@ class CreeperAttack {
     this.bestWave,
   });
 
-  factory CreeperAttack.fromRawJson(String str) => CreeperAttack.fromJson(json.decode(str));
+  factory CreeperAttack.fromRawJson(String str) =>
+      CreeperAttack.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory CreeperAttack.fromJson(Map<String, dynamic> json) => CreeperAttack(
-    bestWave: json["best_wave"],
-  );
+        bestWave: json["best_wave"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "best_wave": bestWave,
-  };
+        "best_wave": bestWave,
+      };
 }
 
 class Dragonwars {
@@ -433,19 +432,20 @@ class Dragonwars {
     this.kills,
   });
 
-  factory Dragonwars.fromRawJson(String str) => Dragonwars.fromJson(json.decode(str));
+  factory Dragonwars.fromRawJson(String str) =>
+      Dragonwars.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Dragonwars.fromJson(Map<String, dynamic> json) => Dragonwars(
-    wins: json["wins"],
-    kills: json["kills"],
-  );
+        wins: json["wins"],
+        kills: json["kills"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "kills": kills,
-  };
+        "wins": wins,
+        "kills": kills,
+      };
 }
 
 class FarmHunt {
@@ -457,19 +457,20 @@ class FarmHunt {
     this.poopCollected,
   });
 
-  factory FarmHunt.fromRawJson(String str) => FarmHunt.fromJson(json.decode(str));
+  factory FarmHunt.fromRawJson(String str) =>
+      FarmHunt.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory FarmHunt.fromJson(Map<String, dynamic> json) => FarmHunt(
-    wins: json["wins"],
-    poopCollected: json["poop_collected"],
-  );
+        wins: json["wins"],
+        poopCollected: json["poop_collected"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "poop_collected": poopCollected,
-  };
+        "wins": wins,
+        "poop_collected": poopCollected,
+      };
 }
 
 class Football {
@@ -483,21 +484,22 @@ class Football {
     this.powerkicks,
   });
 
-  factory Football.fromRawJson(String str) => Football.fromJson(json.decode(str));
+  factory Football.fromRawJson(String str) =>
+      Football.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Football.fromJson(Map<String, dynamic> json) => Football(
-    wins: json["wins"],
-    goals: json["goals"],
-    powerkicks: json["powerkicks"],
-  );
+        wins: json["wins"],
+        goals: json["goals"],
+        powerkicks: json["powerkicks"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "goals": goals,
-    "powerkicks": powerkicks,
-  };
+        "wins": wins,
+        "goals": goals,
+        "powerkicks": powerkicks,
+      };
 }
 
 class GalaxyWars {
@@ -515,25 +517,26 @@ class GalaxyWars {
     this.shotsFired,
   });
 
-  factory GalaxyWars.fromRawJson(String str) => GalaxyWars.fromJson(json.decode(str));
+  factory GalaxyWars.fromRawJson(String str) =>
+      GalaxyWars.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory GalaxyWars.fromJson(Map<String, dynamic> json) => GalaxyWars(
-    wins: json["wins"],
-    kills: json["kills"],
-    deaths: json["deaths"],
-    rebelKills: json["rebel_kills"],
-    shotsFired: json["shots_fired"],
-  );
+        wins: json["wins"],
+        kills: json["kills"],
+        deaths: json["deaths"],
+        rebelKills: json["rebel_kills"],
+        shotsFired: json["shots_fired"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "kills": kills,
-    "deaths": deaths,
-    "rebel_kills": rebelKills,
-    "shots_fired": shotsFired,
-  };
+        "wins": wins,
+        "kills": kills,
+        "deaths": deaths,
+        "rebel_kills": rebelKills,
+        "shots_fired": shotsFired,
+      };
 }
 
 class HoleInTheWall {
@@ -549,23 +552,24 @@ class HoleInTheWall {
     this.highestScoreFinals,
   });
 
-  factory HoleInTheWall.fromRawJson(String str) => HoleInTheWall.fromJson(json.decode(str));
+  factory HoleInTheWall.fromRawJson(String str) =>
+      HoleInTheWall.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory HoleInTheWall.fromJson(Map<String, dynamic> json) => HoleInTheWall(
-    wins: json["wins"],
-    rounds: json["rounds"],
-    highestScoreQualification: json["highest_score_qualification"],
-    highestScoreFinals: json["highest_score_finals"],
-  );
+        wins: json["wins"],
+        rounds: json["rounds"],
+        highestScoreQualification: json["highest_score_qualification"],
+        highestScoreFinals: json["highest_score_finals"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "rounds": rounds,
-    "highest_score_qualification": highestScoreQualification,
-    "highest_score_finals": highestScoreFinals,
-  };
+        "wins": wins,
+        "rounds": rounds,
+        "highest_score_qualification": highestScoreQualification,
+        "highest_score_finals": highestScoreFinals,
+      };
 }
 
 class Says {
@@ -582,14 +586,14 @@ class Says {
   String toRawJson() => json.encode(toJson());
 
   factory Says.fromJson(Map<String, dynamic> json) => Says(
-    wins: json["wins"],
-    rounds: json["rounds"],
-  );
+        wins: json["wins"],
+        rounds: json["rounds"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "rounds": rounds,
-  };
+        "wins": wins,
+        "rounds": rounds,
+      };
 }
 
 class Miniwalls {
@@ -615,33 +619,34 @@ class Miniwalls {
     this.kit,
   });
 
-  factory Miniwalls.fromRawJson(String str) => Miniwalls.fromJson(json.decode(str));
+  factory Miniwalls.fromRawJson(String str) =>
+      Miniwalls.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Miniwalls.fromJson(Map<String, dynamic> json) => Miniwalls(
-    wins: json["wins"],
-    kills: json["kills"],
-    deaths: json["deaths"],
-    finalKills: json["final_kills"],
-    arrowsShot: json["arrows_shot"],
-    arrowsHit: json["arrows_hit"],
-    witherDamage: json["wither_damage"],
-    witherKills: json["wither_kills"],
-    kit: json["kit"],
-  );
+        wins: json["wins"],
+        kills: json["kills"],
+        deaths: json["deaths"],
+        finalKills: json["final_kills"],
+        arrowsShot: json["arrows_shot"],
+        arrowsHit: json["arrows_hit"],
+        witherDamage: json["wither_damage"],
+        witherKills: json["wither_kills"],
+        kit: json["kit"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "kills": kills,
-    "deaths": deaths,
-    "final_kills": finalKills,
-    "arrows_shot": arrowsShot,
-    "arrows_hit": arrowsHit,
-    "wither_damage": witherDamage,
-    "wither_kills": witherKills,
-    "kit": kit,
-  };
+        "wins": wins,
+        "kills": kills,
+        "deaths": deaths,
+        "final_kills": finalKills,
+        "arrows_shot": arrowsShot,
+        "arrows_hit": arrowsHit,
+        "wither_damage": witherDamage,
+        "wither_kills": witherKills,
+        "kit": kit,
+      };
 }
 
 class PartyGames {
@@ -655,21 +660,22 @@ class PartyGames {
     this.wins3,
   });
 
-  factory PartyGames.fromRawJson(String str) => PartyGames.fromJson(json.decode(str));
+  factory PartyGames.fromRawJson(String str) =>
+      PartyGames.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory PartyGames.fromJson(Map<String, dynamic> json) => PartyGames(
-    wins1: json["wins_1"],
-    wins2: json["wins_2"],
-    wins3: json["wins_3"],
-  );
+        wins1: json["wins_1"],
+        wins2: json["wins_2"],
+        wins3: json["wins_3"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins_1": wins1,
-    "wins_2": wins2,
-    "wins_3": wins3,
-  };
+        "wins_1": wins1,
+        "wins_2": wins2,
+        "wins_3": wins3,
+      };
 }
 
 class Zombies {
@@ -702,30 +708,30 @@ class Zombies {
   String toRawJson() => json.encode(toJson());
 
   factory Zombies.fromJson(Map<String, dynamic> json) => Zombies(
-    wins: json["wins"],
-    zombieKills: json["zombie_kills"],
-    deaths: json["deaths"],
-    totalRoundsSurvived: json["total_rounds_survived"],
-    bulletsHit: json["bullets_hit"],
-    headshots: json["headshots"],
-    playersRevived: json["players_revived"],
-    windowsRepaired: json["windows_repaired"],
-    doorsOpened: json["doors_opened"],
-    bestRound: json["best_round"],
-  );
+        wins: json["wins"],
+        zombieKills: json["zombie_kills"],
+        deaths: json["deaths"],
+        totalRoundsSurvived: json["total_rounds_survived"],
+        bulletsHit: json["bullets_hit"],
+        headshots: json["headshots"],
+        playersRevived: json["players_revived"],
+        windowsRepaired: json["windows_repaired"],
+        doorsOpened: json["doors_opened"],
+        bestRound: json["best_round"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "wins": wins,
-    "zombie_kills": zombieKills,
-    "deaths": deaths,
-    "total_rounds_survived": totalRoundsSurvived,
-    "bullets_hit": bulletsHit,
-    "headshots": headshots,
-    "players_revived": playersRevived,
-    "windows_repaired": windowsRepaired,
-    "doors_opened": doorsOpened,
-    "best_round": bestRound,
-  };
+        "wins": wins,
+        "zombie_kills": zombieKills,
+        "deaths": deaths,
+        "total_rounds_survived": totalRoundsSurvived,
+        "bullets_hit": bulletsHit,
+        "headshots": headshots,
+        "players_revived": playersRevived,
+        "windows_repaired": windowsRepaired,
+        "doors_opened": doorsOpened,
+        "best_round": bestRound,
+      };
 }
 
 class Arena {
@@ -762,34 +768,34 @@ class Arena {
   String toRawJson() => json.encode(toJson());
 
   factory Arena.fromJson(Map<String, dynamic> json) => Arena(
-    coins: json["coins"],
-    coinsSpent: json["coins_spent"],
-    hat: json["hat"],
-    penalty: json["penalty"],
-    magicalChest: json["magical_chest"],
-    keys: json["keys"],
-    selectedSword: json["selected_sword"],
-    activeRune: json["active_rune"],
-    skills: Skills.fromJson(json["skills"]),
-    combatLevels: CombatLevels.fromJson(json["combat_levels"]),
-    runeLevels: RuneLevels.fromJson(json["rune_levels"]),
-    gamemodes: ArenaGamemodes.fromJson(json["gamemodes"]),
-  );
+        coins: json["coins"],
+        coinsSpent: json["coins_spent"],
+        hat: json["hat"],
+        penalty: json["penalty"],
+        magicalChest: json["magical_chest"],
+        keys: json["keys"],
+        selectedSword: json["selected_sword"],
+        activeRune: json["active_rune"],
+        skills: Skills.fromJson(json["skills"]),
+        combatLevels: CombatLevels.fromJson(json["combat_levels"]),
+        runeLevels: RuneLevels.fromJson(json["rune_levels"]),
+        gamemodes: ArenaGamemodes.fromJson(json["gamemodes"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "coins_spent": coinsSpent,
-    "hat": hat,
-    "penalty": penalty,
-    "magical_chest": magicalChest,
-    "keys": keys,
-    "selected_sword": selectedSword,
-    "active_rune": activeRune,
-    "skills": skills.toJson(),
-    "combat_levels": combatLevels.toJson(),
-    "rune_levels": runeLevels.toJson(),
-    "gamemodes": gamemodes.toJson(),
-  };
+        "coins": coins,
+        "coins_spent": coinsSpent,
+        "hat": hat,
+        "penalty": penalty,
+        "magical_chest": magicalChest,
+        "keys": keys,
+        "selected_sword": selectedSword,
+        "active_rune": activeRune,
+        "skills": skills.toJson(),
+        "combat_levels": combatLevels.toJson(),
+        "rune_levels": runeLevels.toJson(),
+        "gamemodes": gamemodes.toJson(),
+      };
 }
 
 class CombatLevels {
@@ -805,23 +811,24 @@ class CombatLevels {
     this.cooldown,
   });
 
-  factory CombatLevels.fromRawJson(String str) => CombatLevels.fromJson(json.decode(str));
+  factory CombatLevels.fromRawJson(String str) =>
+      CombatLevels.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory CombatLevels.fromJson(Map<String, dynamic> json) => CombatLevels(
-    melee: json["melee"],
-    health: json["health"],
-    energy: json["energy"],
-    cooldown: json["cooldown"],
-  );
+        melee: json["melee"],
+        health: json["health"],
+        energy: json["energy"],
+        cooldown: json["cooldown"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "melee": melee,
-    "health": health,
-    "energy": energy,
-    "cooldown": cooldown,
-  };
+        "melee": melee,
+        "health": health,
+        "energy": energy,
+        "cooldown": cooldown,
+      };
 }
 
 class ArenaGamemodes {
@@ -835,21 +842,22 @@ class ArenaGamemodes {
     this.fourVFour,
   });
 
-  factory ArenaGamemodes.fromRawJson(String str) => ArenaGamemodes.fromJson(json.decode(str));
+  factory ArenaGamemodes.fromRawJson(String str) =>
+      ArenaGamemodes.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory ArenaGamemodes.fromJson(Map<String, dynamic> json) => ArenaGamemodes(
-    oneVOne: FourVFour.fromJson(json["one_v_one"]),
-    twoVTwo: FourVFour.fromJson(json["two_v_two"]),
-    fourVFour: FourVFour.fromJson(json["four_v_four"]),
-  );
+        oneVOne: FourVFour.fromJson(json["one_v_one"]),
+        twoVTwo: FourVFour.fromJson(json["two_v_two"]),
+        fourVFour: FourVFour.fromJson(json["four_v_four"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "one_v_one": oneVOne.toJson(),
-    "two_v_two": twoVTwo.toJson(),
-    "four_v_four": fourVFour.toJson(),
-  };
+        "one_v_one": oneVOne.toJson(),
+        "two_v_two": twoVTwo.toJson(),
+        "four_v_four": fourVFour.toJson(),
+      };
 }
 
 class FourVFour {
@@ -879,37 +887,38 @@ class FourVFour {
     this.winPercentage,
   });
 
-  factory FourVFour.fromRawJson(String str) => FourVFour.fromJson(json.decode(str));
+  factory FourVFour.fromRawJson(String str) =>
+      FourVFour.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory FourVFour.fromJson(Map<String, dynamic> json) => FourVFour(
-    damage: json["damage"],
-    kills: json["kills"],
-    deaths: json["deaths"],
-    losses: json["losses"],
-    wins: json["wins"],
-    winStreaks: json["win_streaks"],
-    games: json["games"],
-    healed: json["healed"],
-    kd: json["kd"],
-    winLoss: json["win_loss"],
-    winPercentage: json["win_percentage"],
-  );
+        damage: json["damage"],
+        kills: json["kills"],
+        deaths: json["deaths"],
+        losses: json["losses"],
+        wins: json["wins"],
+        winStreaks: json["win_streaks"],
+        games: json["games"],
+        healed: json["healed"],
+        kd: json["kd"],
+        winLoss: json["win_loss"],
+        winPercentage: json["win_percentage"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "damage": damage,
-    "kills": kills,
-    "deaths": deaths,
-    "losses": losses,
-    "wins": wins,
-    "win_streaks": winStreaks,
-    "games": games,
-    "healed": healed,
-    "kd": kd,
-    "win_loss": winLoss,
-    "win_percentage": winPercentage,
-  };
+        "damage": damage,
+        "kills": kills,
+        "deaths": deaths,
+        "losses": losses,
+        "wins": wins,
+        "win_streaks": winStreaks,
+        "games": games,
+        "healed": healed,
+        "kd": kd,
+        "win_loss": winLoss,
+        "win_percentage": winPercentage,
+      };
 }
 
 class RuneLevels {
@@ -925,23 +934,24 @@ class RuneLevels {
     this.speed,
   });
 
-  factory RuneLevels.fromRawJson(String str) => RuneLevels.fromJson(json.decode(str));
+  factory RuneLevels.fromRawJson(String str) =>
+      RuneLevels.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory RuneLevels.fromJson(Map<String, dynamic> json) => RuneLevels(
-    damage: json["damage"],
-    energy: json["energy"],
-    slowing: json["slowing"],
-    speed: json["speed"],
-  );
+        damage: json["damage"],
+        energy: json["energy"],
+        slowing: json["slowing"],
+        speed: json["speed"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "damage": damage,
-    "energy": energy,
-    "slowing": slowing,
-    "speed": speed,
-  };
+        "damage": damage,
+        "energy": energy,
+        "slowing": slowing,
+        "speed": speed,
+      };
 }
 
 class Skills {
@@ -962,18 +972,18 @@ class Skills {
   String toRawJson() => json.encode(toJson());
 
   factory Skills.fromJson(Map<String, dynamic> json) => Skills(
-    offensive: json["offensive"],
-    support: json["support"],
-    utility: json["utility"],
-    ultimate: json["ultimate"],
-  );
+        offensive: json["offensive"],
+        support: json["support"],
+        utility: json["utility"],
+        ultimate: json["ultimate"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "offensive": offensive,
-    "support": support,
-    "utility": utility,
-    "ultimate": ultimate,
-  };
+        "offensive": offensive,
+        "support": support,
+        "utility": utility,
+        "ultimate": ultimate,
+      };
 }
 
 class BedWars {
@@ -1030,54 +1040,55 @@ class BedWars {
   String toRawJson() => json.encode(toJson());
 
   factory BedWars.fromJson(Map<String, dynamic> json) => BedWars(
-    coins: json["coins"],
-    exp: json["exp"],
-    level: json["level"],
-    wins: json["wins"],
-    losses: json["losses"],
-    gamesPlayed: json["games_played"],
-    kills: json["kills"],
-    deaths: json["deaths"],
-    kD: json["k_d"],
-    wL: json["w_l"],
-    bedsBroken: json["beds_broken"],
-    bedsLost: json["beds_lost"],
-    bedRatio: json["bed_ratio"],
-    finalKills: json["final_kills"],
-    finalDeaths: json["final_deaths"],
-    finalKD: json["final_k_d"],
-    voidKills: json["void_kills"],
-    voidDeaths: json["void_deaths"],
-    winstreak: json["winstreak"],
-    boxes: Boxes.fromJson(json["boxes"]),
-    resourcesCollected: ResourcesCollected.fromJson(json["resources_collected"]),
-    gamemodes: InventoriesClass.fromJson(json["gamemodes"]),
-  );
+        coins: json["coins"],
+        exp: json["exp"],
+        level: json["level"],
+        wins: json["wins"],
+        losses: json["losses"],
+        gamesPlayed: json["games_played"],
+        kills: json["kills"],
+        deaths: json["deaths"],
+        kD: json["k_d"],
+        wL: json["w_l"],
+        bedsBroken: json["beds_broken"],
+        bedsLost: json["beds_lost"],
+        bedRatio: json["bed_ratio"],
+        finalKills: json["final_kills"],
+        finalDeaths: json["final_deaths"],
+        finalKD: json["final_k_d"],
+        voidKills: json["void_kills"],
+        voidDeaths: json["void_deaths"],
+        winstreak: json["winstreak"],
+        boxes: Boxes.fromJson(json["boxes"]),
+        resourcesCollected:
+            ResourcesCollected.fromJson(json["resources_collected"]),
+        gamemodes: InventoriesClass.fromJson(json["gamemodes"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "exp": exp,
-    "level": level,
-    "wins": wins,
-    "losses": losses,
-    "games_played": gamesPlayed,
-    "kills": kills,
-    "deaths": deaths,
-    "k_d": kD,
-    "w_l": wL,
-    "beds_broken": bedsBroken,
-    "beds_lost": bedsLost,
-    "bed_ratio": bedRatio,
-    "final_kills": finalKills,
-    "final_deaths": finalDeaths,
-    "final_k_d": finalKD,
-    "void_kills": voidKills,
-    "void_deaths": voidDeaths,
-    "winstreak": winstreak,
-    "boxes": boxes.toJson(),
-    "resources_collected": resourcesCollected.toJson(),
-    "gamemodes": gamemodes.toJson(),
-  };
+        "coins": coins,
+        "exp": exp,
+        "level": level,
+        "wins": wins,
+        "losses": losses,
+        "games_played": gamesPlayed,
+        "kills": kills,
+        "deaths": deaths,
+        "k_d": kD,
+        "w_l": wL,
+        "beds_broken": bedsBroken,
+        "beds_lost": bedsLost,
+        "bed_ratio": bedRatio,
+        "final_kills": finalKills,
+        "final_deaths": finalDeaths,
+        "final_k_d": finalKD,
+        "void_kills": voidKills,
+        "void_deaths": voidDeaths,
+        "winstreak": winstreak,
+        "boxes": boxes.toJson(),
+        "resources_collected": resourcesCollected.toJson(),
+        "gamemodes": gamemodes.toJson(),
+      };
 }
 
 class Boxes {
@@ -1102,36 +1113,36 @@ class Boxes {
   String toRawJson() => json.encode(toJson());
 
   factory Boxes.fromJson(Map<String, dynamic> json) => Boxes(
-    current: json["current"],
-    opened: json["opened"],
-    commons: json["commons"],
-    rares: json["rares"],
-    epics: json["epics"],
-    legendaries: json["legendaries"],
-  );
+        current: json["current"],
+        opened: json["opened"],
+        commons: json["commons"],
+        rares: json["rares"],
+        epics: json["epics"],
+        legendaries: json["legendaries"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "current": current,
-    "opened": opened,
-    "commons": commons,
-    "rares": rares,
-    "epics": epics,
-    "legendaries": legendaries,
-  };
+        "current": current,
+        "opened": opened,
+        "commons": commons,
+        "rares": rares,
+        "epics": epics,
+        "legendaries": legendaries,
+      };
 }
 
 class InventoriesClass {
   InventoriesClass();
 
-  factory InventoriesClass.fromRawJson(String str) => InventoriesClass.fromJson(json.decode(str));
+  factory InventoriesClass.fromRawJson(String str) =>
+      InventoriesClass.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory InventoriesClass.fromJson(Map<String, dynamic> json) => InventoriesClass(
-  );
+  factory InventoriesClass.fromJson(Map<String, dynamic> json) =>
+      InventoriesClass();
 
-  Map<String, dynamic> toJson() => {
-  };
+  Map<String, dynamic> toJson() => {};
 }
 
 class ResourcesCollected {
@@ -1147,23 +1158,25 @@ class ResourcesCollected {
     this.emerald,
   });
 
-  factory ResourcesCollected.fromRawJson(String str) => ResourcesCollected.fromJson(json.decode(str));
+  factory ResourcesCollected.fromRawJson(String str) =>
+      ResourcesCollected.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory ResourcesCollected.fromJson(Map<String, dynamic> json) => ResourcesCollected(
-    iron: json["iron"],
-    gold: json["gold"],
-    diamond: json["diamond"],
-    emerald: json["emerald"],
-  );
+  factory ResourcesCollected.fromJson(Map<String, dynamic> json) =>
+      ResourcesCollected(
+        iron: json["iron"],
+        gold: json["gold"],
+        diamond: json["diamond"],
+        emerald: json["emerald"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "iron": iron,
-    "gold": gold,
-    "diamond": diamond,
-    "emerald": emerald,
-  };
+        "iron": iron,
+        "gold": gold,
+        "diamond": diamond,
+        "emerald": emerald,
+      };
 }
 
 class Blitz {
@@ -1234,68 +1247,68 @@ class Blitz {
   String toRawJson() => json.encode(toJson());
 
   factory Blitz.fromJson(Map<String, dynamic> json) => Blitz(
-    coins: json["coins"],
-    deaths: json["deaths"],
-    kills: json["kills"],
-    kD: json["k_d"],
-    wins: json["wins"],
-    teamWins: json["team_wins"],
-    winLoss: json["win_loss"],
-    winPercentage: json["win_percentage"],
-    weeklyKills: json["weekly_kills"],
-    monthlyKills: json["monthly_kills"],
-    ramboWins: json["rambo_wins"],
-    randomWins: json["random_wins"],
-    damageTaken: json["damage_taken"],
-    tauntKills: json["taunt_kills"],
-    potionsDrunk: json["potions_drunk"],
-    damage: json["damage"],
-    mobsSpawned: json["mobs_spawned"],
-    timePlayed: json["time_played"],
-    arrowsHit: json["arrows_hit"],
-    gamesPlayed: json["games_played"],
-    potionsThrown: json["potions_thrown"],
-    arrowsFired: json["arrows_fired"],
-    blitzUses: json["blitz_uses"],
-    chestsOpened: json["chests_opened"],
-    kitsLevels: InventoriesClass.fromJson(json["kits_levels"]),
-    kitStats: InventoriesClass.fromJson(json["kit_stats"]),
-    equipped: Equipped.fromJson(json["equipped"]),
-    settings: Settings.fromJson(json["settings"]),
-    inventories: InventoriesClass.fromJson(json["inventories"]),
-  );
+        coins: json["coins"],
+        deaths: json["deaths"],
+        kills: json["kills"],
+        kD: json["k_d"],
+        wins: json["wins"],
+        teamWins: json["team_wins"],
+        winLoss: json["win_loss"],
+        winPercentage: json["win_percentage"],
+        weeklyKills: json["weekly_kills"],
+        monthlyKills: json["monthly_kills"],
+        ramboWins: json["rambo_wins"],
+        randomWins: json["random_wins"],
+        damageTaken: json["damage_taken"],
+        tauntKills: json["taunt_kills"],
+        potionsDrunk: json["potions_drunk"],
+        damage: json["damage"],
+        mobsSpawned: json["mobs_spawned"],
+        timePlayed: json["time_played"],
+        arrowsHit: json["arrows_hit"],
+        gamesPlayed: json["games_played"],
+        potionsThrown: json["potions_thrown"],
+        arrowsFired: json["arrows_fired"],
+        blitzUses: json["blitz_uses"],
+        chestsOpened: json["chests_opened"],
+        kitsLevels: InventoriesClass.fromJson(json["kits_levels"]),
+        kitStats: InventoriesClass.fromJson(json["kit_stats"]),
+        equipped: Equipped.fromJson(json["equipped"]),
+        settings: Settings.fromJson(json["settings"]),
+        inventories: InventoriesClass.fromJson(json["inventories"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "deaths": deaths,
-    "kills": kills,
-    "k_d": kD,
-    "wins": wins,
-    "team_wins": teamWins,
-    "win_loss": winLoss,
-    "win_percentage": winPercentage,
-    "weekly_kills": weeklyKills,
-    "monthly_kills": monthlyKills,
-    "rambo_wins": ramboWins,
-    "random_wins": randomWins,
-    "damage_taken": damageTaken,
-    "taunt_kills": tauntKills,
-    "potions_drunk": potionsDrunk,
-    "damage": damage,
-    "mobs_spawned": mobsSpawned,
-    "time_played": timePlayed,
-    "arrows_hit": arrowsHit,
-    "games_played": gamesPlayed,
-    "potions_thrown": potionsThrown,
-    "arrows_fired": arrowsFired,
-    "blitz_uses": blitzUses,
-    "chests_opened": chestsOpened,
-    "kits_levels": kitsLevels.toJson(),
-    "kit_stats": kitStats.toJson(),
-    "equipped": equipped.toJson(),
-    "settings": settings.toJson(),
-    "inventories": inventories.toJson(),
-  };
+        "coins": coins,
+        "deaths": deaths,
+        "kills": kills,
+        "k_d": kD,
+        "wins": wins,
+        "team_wins": teamWins,
+        "win_loss": winLoss,
+        "win_percentage": winPercentage,
+        "weekly_kills": weeklyKills,
+        "monthly_kills": monthlyKills,
+        "rambo_wins": ramboWins,
+        "random_wins": randomWins,
+        "damage_taken": damageTaken,
+        "taunt_kills": tauntKills,
+        "potions_drunk": potionsDrunk,
+        "damage": damage,
+        "mobs_spawned": mobsSpawned,
+        "time_played": timePlayed,
+        "arrows_hit": arrowsHit,
+        "games_played": gamesPlayed,
+        "potions_thrown": potionsThrown,
+        "arrows_fired": arrowsFired,
+        "blitz_uses": blitzUses,
+        "chests_opened": chestsOpened,
+        "kits_levels": kitsLevels.toJson(),
+        "kit_stats": kitStats.toJson(),
+        "equipped": equipped.toJson(),
+        "settings": settings.toJson(),
+        "inventories": inventories.toJson(),
+      };
 }
 
 class Equipped {
@@ -1311,23 +1324,24 @@ class Equipped {
     this.finisher,
   });
 
-  factory Equipped.fromRawJson(String str) => Equipped.fromJson(json.decode(str));
+  factory Equipped.fromRawJson(String str) =>
+      Equipped.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Equipped.fromJson(Map<String, dynamic> json) => Equipped(
-    aura: json["aura"],
-    taunt: json["taunt"],
-    victoryDance: json["victory_dance"],
-    finisher: json["finisher"],
-  );
+        aura: json["aura"],
+        taunt: json["taunt"],
+        victoryDance: json["victory_dance"],
+        finisher: json["finisher"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "aura": aura,
-    "taunt": taunt,
-    "victory_dance": victoryDance,
-    "finisher": finisher,
-  };
+        "aura": aura,
+        "taunt": taunt,
+        "victory_dance": victoryDance,
+        "finisher": finisher,
+      };
 }
 
 class Settings {
@@ -1339,19 +1353,20 @@ class Settings {
     this.autoArmor,
   });
 
-  factory Settings.fromRawJson(String str) => Settings.fromJson(json.decode(str));
+  factory Settings.fromRawJson(String str) =>
+      Settings.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Settings.fromJson(Map<String, dynamic> json) => Settings(
-    defaultKit: json["default_kit"],
-    autoArmor: json["auto_armor"],
-  );
+        defaultKit: json["default_kit"],
+        autoArmor: json["auto_armor"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "default_kit": defaultKit,
-    "auto_armor": autoArmor,
-  };
+        "default_kit": defaultKit,
+        "auto_armor": autoArmor,
+      };
 }
 
 class BuildBattle {
@@ -1397,53 +1412,54 @@ class BuildBattle {
     this.themeRatings,
   });
 
-  factory BuildBattle.fromRawJson(String str) => BuildBattle.fromJson(json.decode(str));
+  factory BuildBattle.fromRawJson(String str) =>
+      BuildBattle.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory BuildBattle.fromJson(Map<String, dynamic> json) => BuildBattle(
-    coins: json["coins"],
-    score: json["score"],
-    wins: json["wins"],
-    wR: json["w_r"],
-    totalVotes: json["total_votes"],
-    winsSoloNormal: json["wins_solo_normal"],
-    winsSoloPro: json["wins_solo_pro"],
-    winsTeamsNormal: json["wins_teams_normal"],
-    winsGuessTheBuild: json["wins_guess_the_build"],
-    correctGuesses: json["correct_guesses"],
-    gamesPlayed: json["games_played"],
-    superVotes: json["super_votes"],
-    loadout: List<String>.from(json["loadout"].map((x) => x)),
-    selectedHat: json["selected_hat"],
-    selectedVictoryDance: json["selected_victory_dance"],
-    selectedSuit: json["selected_suit"],
-    selectedMovementTrail: json["selected_movement_trail"],
-    selectedBackdrop: json["selected_backdrop"],
-    themeRatings: InventoriesClass.fromJson(json["themeRatings"]),
-  );
+        coins: json["coins"],
+        score: json["score"],
+        wins: json["wins"],
+        wR: json["w_r"],
+        totalVotes: json["total_votes"],
+        winsSoloNormal: json["wins_solo_normal"],
+        winsSoloPro: json["wins_solo_pro"],
+        winsTeamsNormal: json["wins_teams_normal"],
+        winsGuessTheBuild: json["wins_guess_the_build"],
+        correctGuesses: json["correct_guesses"],
+        gamesPlayed: json["games_played"],
+        superVotes: json["super_votes"],
+        loadout: List<String>.from(json["loadout"].map((x) => x)),
+        selectedHat: json["selected_hat"],
+        selectedVictoryDance: json["selected_victory_dance"],
+        selectedSuit: json["selected_suit"],
+        selectedMovementTrail: json["selected_movement_trail"],
+        selectedBackdrop: json["selected_backdrop"],
+        themeRatings: InventoriesClass.fromJson(json["themeRatings"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "score": score,
-    "wins": wins,
-    "w_r": wR,
-    "total_votes": totalVotes,
-    "wins_solo_normal": winsSoloNormal,
-    "wins_solo_pro": winsSoloPro,
-    "wins_teams_normal": winsTeamsNormal,
-    "wins_guess_the_build": winsGuessTheBuild,
-    "correct_guesses": correctGuesses,
-    "games_played": gamesPlayed,
-    "super_votes": superVotes,
-    "loadout": List<dynamic>.from(loadout.map((x) => x)),
-    "selected_hat": selectedHat,
-    "selected_victory_dance": selectedVictoryDance,
-    "selected_suit": selectedSuit,
-    "selected_movement_trail": selectedMovementTrail,
-    "selected_backdrop": selectedBackdrop,
-    "themeRatings": themeRatings.toJson(),
-  };
+        "coins": coins,
+        "score": score,
+        "wins": wins,
+        "w_r": wR,
+        "total_votes": totalVotes,
+        "wins_solo_normal": winsSoloNormal,
+        "wins_solo_pro": winsSoloPro,
+        "wins_teams_normal": winsTeamsNormal,
+        "wins_guess_the_build": winsGuessTheBuild,
+        "correct_guesses": correctGuesses,
+        "games_played": gamesPlayed,
+        "super_votes": superVotes,
+        "loadout": List<dynamic>.from(loadout.map((x) => x)),
+        "selected_hat": selectedHat,
+        "selected_victory_dance": selectedVictoryDance,
+        "selected_suit": selectedSuit,
+        "selected_movement_trail": selectedMovementTrail,
+        "selected_backdrop": selectedBackdrop,
+        "themeRatings": themeRatings.toJson(),
+      };
 }
 
 class CvC {
@@ -1498,52 +1514,53 @@ class CvC {
   String toRawJson() => json.encode(toJson());
 
   factory CvC.fromJson(Map<String, dynamic> json) => CvC(
-    coins: json["coins"],
-    deaths: json["deaths"],
-    kills: json["kills"],
-    kd: json["kd"],
-    wins: json["wins"],
-    copKills: json["cop_kills"],
-    criminalKills: json["criminal_kills"],
-    weeklyKills: json["weekly_kills"],
-    monthlyKills: json["monthly_kills"],
-    bombsPlanted: json["bombs_planted"],
-    bombsDefused: json["bombs_defused"],
-    grenadeKills: json["grenade_kills"],
-    headshotKills: json["headshot_kills"],
-    roundWins: json["round_wins"],
-    selectedLobbyPrefix: json["selected_lobby_prefix"],
-    shotsFired: json["shots_fired"],
-    showLobbyPrefix: json["show_lobby_prefix"],
-    mapWins: MapWins.fromJson(json["map_wins"]),
-    deathmatch: Deathmatch.fromJson(json["deathmatch"]),
-    perks: Perks.fromJson(json["perks"]),
-    selectedCosmetics: SelectedCosmetics.fromJson(json["selected_cosmetics"]),
-  );
+        coins: json["coins"],
+        deaths: json["deaths"],
+        kills: json["kills"],
+        kd: json["kd"],
+        wins: json["wins"],
+        copKills: json["cop_kills"],
+        criminalKills: json["criminal_kills"],
+        weeklyKills: json["weekly_kills"],
+        monthlyKills: json["monthly_kills"],
+        bombsPlanted: json["bombs_planted"],
+        bombsDefused: json["bombs_defused"],
+        grenadeKills: json["grenade_kills"],
+        headshotKills: json["headshot_kills"],
+        roundWins: json["round_wins"],
+        selectedLobbyPrefix: json["selected_lobby_prefix"],
+        shotsFired: json["shots_fired"],
+        showLobbyPrefix: json["show_lobby_prefix"],
+        mapWins: MapWins.fromJson(json["map_wins"]),
+        deathmatch: Deathmatch.fromJson(json["deathmatch"]),
+        perks: Perks.fromJson(json["perks"]),
+        selectedCosmetics:
+            SelectedCosmetics.fromJson(json["selected_cosmetics"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "deaths": deaths,
-    "kills": kills,
-    "kd": kd,
-    "wins": wins,
-    "cop_kills": copKills,
-    "criminal_kills": criminalKills,
-    "weekly_kills": weeklyKills,
-    "monthly_kills": monthlyKills,
-    "bombs_planted": bombsPlanted,
-    "bombs_defused": bombsDefused,
-    "grenade_kills": grenadeKills,
-    "headshot_kills": headshotKills,
-    "round_wins": roundWins,
-    "selected_lobby_prefix": selectedLobbyPrefix,
-    "shots_fired": shotsFired,
-    "show_lobby_prefix": showLobbyPrefix,
-    "map_wins": mapWins.toJson(),
-    "deathmatch": deathmatch.toJson(),
-    "perks": perks.toJson(),
-    "selected_cosmetics": selectedCosmetics.toJson(),
-  };
+        "coins": coins,
+        "deaths": deaths,
+        "kills": kills,
+        "kd": kd,
+        "wins": wins,
+        "cop_kills": copKills,
+        "criminal_kills": criminalKills,
+        "weekly_kills": weeklyKills,
+        "monthly_kills": monthlyKills,
+        "bombs_planted": bombsPlanted,
+        "bombs_defused": bombsDefused,
+        "grenade_kills": grenadeKills,
+        "headshot_kills": headshotKills,
+        "round_wins": roundWins,
+        "selected_lobby_prefix": selectedLobbyPrefix,
+        "shots_fired": shotsFired,
+        "show_lobby_prefix": showLobbyPrefix,
+        "map_wins": mapWins.toJson(),
+        "deathmatch": deathmatch.toJson(),
+        "perks": perks.toJson(),
+        "selected_cosmetics": selectedCosmetics.toJson(),
+      };
 }
 
 class Deathmatch {
@@ -1563,27 +1580,28 @@ class Deathmatch {
     this.criminalKills,
   });
 
-  factory Deathmatch.fromRawJson(String str) => Deathmatch.fromJson(json.decode(str));
+  factory Deathmatch.fromRawJson(String str) =>
+      Deathmatch.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Deathmatch.fromJson(Map<String, dynamic> json) => Deathmatch(
-    kills: json["kills"],
-    deaths: json["deaths"],
-    kd: json["kd"],
-    wins: json["wins"],
-    copKills: json["cop_kills"],
-    criminalKills: json["criminal_kills"],
-  );
+        kills: json["kills"],
+        deaths: json["deaths"],
+        kd: json["kd"],
+        wins: json["wins"],
+        copKills: json["cop_kills"],
+        criminalKills: json["criminal_kills"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "kills": kills,
-    "deaths": deaths,
-    "kd": kd,
-    "wins": wins,
-    "cop_kills": copKills,
-    "criminal_kills": criminalKills,
-  };
+        "kills": kills,
+        "deaths": deaths,
+        "kd": kd,
+        "wins": wins,
+        "cop_kills": copKills,
+        "criminal_kills": criminalKills,
+      };
 }
 
 class MapWins {
@@ -1612,26 +1630,26 @@ class MapWins {
   String toRawJson() => json.encode(toJson());
 
   factory MapWins.fromJson(Map<String, dynamic> json) => MapWins(
-    alleyway: json["alleyway"],
-    atomic: json["atomic"],
-    carrier: json["carrier"],
-    melonFactory: json["melon_factory"],
-    overgrown: json["overgrown"],
-    reserve: json["reserve"],
-    sandstorm: json["sandstorm"],
-    temple: json["temple"],
-  );
+        alleyway: json["alleyway"],
+        atomic: json["atomic"],
+        carrier: json["carrier"],
+        melonFactory: json["melon_factory"],
+        overgrown: json["overgrown"],
+        reserve: json["reserve"],
+        sandstorm: json["sandstorm"],
+        temple: json["temple"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "alleyway": alleyway,
-    "atomic": atomic,
-    "carrier": carrier,
-    "melon_factory": melonFactory,
-    "overgrown": overgrown,
-    "reserve": reserve,
-    "sandstorm": sandstorm,
-    "temple": temple,
-  };
+        "alleyway": alleyway,
+        "atomic": atomic,
+        "carrier": carrier,
+        "melon_factory": melonFactory,
+        "overgrown": overgrown,
+        "reserve": reserve,
+        "sandstorm": sandstorm,
+        "temple": temple,
+      };
 }
 
 class Perks {
@@ -1662,28 +1680,28 @@ class Perks {
   String toRawJson() => json.encode(toJson());
 
   factory Perks.fromJson(Map<String, dynamic> json) => Perks(
-    player: PlayerClass.fromJson(json["player"]),
-    carbine: Carbine.fromJson(json["carbine"]),
-    knife: Knife.fromJson(json["knife"]),
-    magnum: Carbine.fromJson(json["magnum"]),
-    pistol: Carbine.fromJson(json["pistol"]),
-    rifle: Carbine.fromJson(json["rifle"]),
-    shotgun: Carbine.fromJson(json["shotgun"]),
-    smg: Carbine.fromJson(json["smg"]),
-    sniper: Carbine.fromJson(json["sniper"]),
-  );
+        player: PlayerClass.fromJson(json["player"]),
+        carbine: Carbine.fromJson(json["carbine"]),
+        knife: Knife.fromJson(json["knife"]),
+        magnum: Carbine.fromJson(json["magnum"]),
+        pistol: Carbine.fromJson(json["pistol"]),
+        rifle: Carbine.fromJson(json["rifle"]),
+        shotgun: Carbine.fromJson(json["shotgun"]),
+        smg: Carbine.fromJson(json["smg"]),
+        sniper: Carbine.fromJson(json["sniper"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "player": player.toJson(),
-    "carbine": carbine.toJson(),
-    "knife": knife.toJson(),
-    "magnum": magnum.toJson(),
-    "pistol": pistol.toJson(),
-    "rifle": rifle.toJson(),
-    "shotgun": shotgun.toJson(),
-    "smg": smg.toJson(),
-    "sniper": sniper.toJson(),
-  };
+        "player": player.toJson(),
+        "carbine": carbine.toJson(),
+        "knife": knife.toJson(),
+        "magnum": magnum.toJson(),
+        "pistol": pistol.toJson(),
+        "rifle": rifle.toJson(),
+        "shotgun": shotgun.toJson(),
+        "smg": smg.toJson(),
+        "sniper": sniper.toJson(),
+      };
 }
 
 class Carbine {
@@ -1706,20 +1724,22 @@ class Carbine {
   String toRawJson() => json.encode(toJson());
 
   factory Carbine.fromJson(Map<String, dynamic> json) => Carbine(
-    costReduction: json["cost_reduction"] == null ? null : json["cost_reduction"],
-    damageIncrease: json["damage_increase"],
-    recoilReduction: json["recoil_reduction"] == null ? null : json["recoil_reduction"],
-    reloadSpeedReduction: json["reload_speed_reduction"],
-    chargeBonus: json["charge_bonus"] == null ? null : json["charge_bonus"],
-  );
+        costReduction:
+            json["cost_reduction"] == null ? null : json["cost_reduction"],
+        damageIncrease: json["damage_increase"],
+        recoilReduction:
+            json["recoil_reduction"] == null ? null : json["recoil_reduction"],
+        reloadSpeedReduction: json["reload_speed_reduction"],
+        chargeBonus: json["charge_bonus"] == null ? null : json["charge_bonus"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "cost_reduction": costReduction == null ? null : costReduction,
-    "damage_increase": damageIncrease,
-    "recoil_reduction": recoilReduction == null ? null : recoilReduction,
-    "reload_speed_reduction": reloadSpeedReduction,
-    "charge_bonus": chargeBonus == null ? null : chargeBonus,
-  };
+        "cost_reduction": costReduction == null ? null : costReduction,
+        "damage_increase": damageIncrease,
+        "recoil_reduction": recoilReduction == null ? null : recoilReduction,
+        "reload_speed_reduction": reloadSpeedReduction,
+        "charge_bonus": chargeBonus == null ? null : chargeBonus,
+      };
 }
 
 class Knife {
@@ -1736,14 +1756,14 @@ class Knife {
   String toRawJson() => json.encode(toJson());
 
   factory Knife.fromJson(Map<String, dynamic> json) => Knife(
-    attackDelay: json["attack_delay"],
-    damageIncrease: json["damage_increase"],
-  );
+        attackDelay: json["attack_delay"],
+        damageIncrease: json["damage_increase"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "attack_delay": attackDelay,
-    "damage_increase": damageIncrease,
-  };
+        "attack_delay": attackDelay,
+        "damage_increase": damageIncrease,
+      };
 }
 
 class PlayerClass {
@@ -1759,23 +1779,24 @@ class PlayerClass {
     this.strengthTraining,
   });
 
-  factory PlayerClass.fromRawJson(String str) => PlayerClass.fromJson(json.decode(str));
+  factory PlayerClass.fromRawJson(String str) =>
+      PlayerClass.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory PlayerClass.fromJson(Map<String, dynamic> json) => PlayerClass(
-    bodyArmorCost: json["body_armor_cost"],
-    bountyHunter: json["bounty_hunter"],
-    pocketChange: json["pocket_change"],
-    strengthTraining: json["strength_training"],
-  );
+        bodyArmorCost: json["body_armor_cost"],
+        bountyHunter: json["bounty_hunter"],
+        pocketChange: json["pocket_change"],
+        strengthTraining: json["strength_training"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "body_armor_cost": bodyArmorCost,
-    "bounty_hunter": bountyHunter,
-    "pocket_change": pocketChange,
-    "strength_training": strengthTraining,
-  };
+        "body_armor_cost": bodyArmorCost,
+        "bounty_hunter": bountyHunter,
+        "pocket_change": pocketChange,
+        "strength_training": strengthTraining,
+      };
 }
 
 class SelectedCosmetics {
@@ -1797,29 +1818,31 @@ class SelectedCosmetics {
     this.smg,
   });
 
-  factory SelectedCosmetics.fromRawJson(String str) => SelectedCosmetics.fromJson(json.decode(str));
+  factory SelectedCosmetics.fromRawJson(String str) =>
+      SelectedCosmetics.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory SelectedCosmetics.fromJson(Map<String, dynamic> json) => SelectedCosmetics(
-    carbine: json["carbine"],
-    knife: json["knife"],
-    magnum: json["magnum"],
-    pistol: json["pistol"],
-    rifle: json["rifle"],
-    shotgun: json["shotgun"],
-    smg: json["smg"],
-  );
+  factory SelectedCosmetics.fromJson(Map<String, dynamic> json) =>
+      SelectedCosmetics(
+        carbine: json["carbine"],
+        knife: json["knife"],
+        magnum: json["magnum"],
+        pistol: json["pistol"],
+        rifle: json["rifle"],
+        shotgun: json["shotgun"],
+        smg: json["smg"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "carbine": carbine,
-    "knife": knife,
-    "magnum": magnum,
-    "pistol": pistol,
-    "rifle": rifle,
-    "shotgun": shotgun,
-    "smg": smg,
-  };
+        "carbine": carbine,
+        "knife": knife,
+        "magnum": magnum,
+        "pistol": pistol,
+        "rifle": rifle,
+        "shotgun": shotgun,
+        "smg": smg,
+      };
 }
 
 class Duels {
@@ -1834,12 +1857,12 @@ class Duels {
   String toRawJson() => json.encode(toJson());
 
   factory Duels.fromJson(Map<String, dynamic> json) => Duels(
-    coins: json["coins"],
-  );
+        coins: json["coins"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-  };
+        "coins": coins,
+      };
 }
 
 class Pit {
@@ -1860,18 +1883,20 @@ class Pit {
   String toRawJson() => json.encode(toJson());
 
   factory Pit.fromJson(Map<String, dynamic> json) => Pit(
-    profile: Profile.fromJson(json["profile"]),
-    statsMove1: json["stats_move_1"],
-    restoredInvBackup1: json["restored_inv_backup_1"],
-    pitStatsPtl: Map.from(json["pit_stats_ptl"]).map((k, v) => MapEntry<String, int>(k, v)),
-  );
+        profile: Profile.fromJson(json["profile"]),
+        statsMove1: json["stats_move_1"],
+        restoredInvBackup1: json["restored_inv_backup_1"],
+        pitStatsPtl: Map.from(json["pit_stats_ptl"])
+            .map((k, v) => MapEntry<String, int>(k, v)),
+      );
 
   Map<String, dynamic> toJson() => {
-    "profile": profile.toJson(),
-    "stats_move_1": statsMove1,
-    "restored_inv_backup_1": restoredInvBackup1,
-    "pit_stats_ptl": Map.from(pitStatsPtl).map((k, v) => MapEntry<String, dynamic>(k, v)),
-  };
+        "profile": profile.toJson(),
+        "stats_move_1": statsMove1,
+        "restored_inv_backup_1": restoredInvBackup1,
+        "pit_stats_ptl": Map.from(pitStatsPtl)
+            .map((k, v) => MapEntry<String, dynamic>(k, v)),
+      };
 }
 
 class Profile {
@@ -1996,122 +2021,138 @@ class Profile {
   String toRawJson() => json.encode(toJson());
 
   factory Profile.fromJson(Map<String, dynamic> json) => Profile(
-    outgoingOffers: List<dynamic>.from(json["outgoing_offers"].map((x) => x)),
-    contractChoices: List<dynamic>.from(json["contract_choices"].map((x) => x)),
-    lastSave: json["last_save"],
-    hatColor: json["hat_color"],
-    tradeTimestamps: List<int>.from(json["trade_timestamps"].map((x) => x)),
-    impatientEnabled: json["impatient_enabled"],
-    invEnderchest: DeathRecaps.fromJson(json["inv_enderchest"]),
-    invContents: DeathRecaps.fromJson(json["inv_contents"]),
-    invArmor: DeathRecaps.fromJson(json["inv_armor"]),
-    itemStash: DeathRecaps.fromJson(json["item_stash"]),
-    mysticWellItem: DeathRecaps.fromJson(json["mystic_well_item"]),
-    mysticWellPants: DeathRecaps.fromJson(json["mystic_well_pants"]),
-    deathRecaps: DeathRecaps.fromJson(json["death_recaps"]),
-    cash: json["cash"],
-    leaderboardStats: InventoriesClass.fromJson(json["leaderboard_stats"]),
-    genesisSpawnInBase: json["genesis_spawn_in_base"],
-    selectedPerk0: json["selected_perk_0"],
-    selectedPerk1: json["selected_perk_1"],
-    selectedPerk2: json["selected_perk_2"],
-    selectedPerk3: json["selected_perk_3"],
-    lastContract: json["last_contract"],
-    endedContracts: List<EndedContract>.from(json["ended_contracts"].map((x) => EndedContract.fromJson(x))),
-    goldTransactions: List<GoldTransaction>.from(json["gold_transactions"].map((x) => GoldTransaction.fromJson(x))),
-    renown: json["renown"],
-    hatEnabled: json["hat_enabled"],
-    genesisPoints: json["genesis_points"],
-    dropConfirmDisabled: json["drop_confirm_disabled"],
-    prestiges: List<Prestige>.from(json["prestiges"].map((x) => Prestige.fromJson(x))),
-    zeroPointThreeGoldTransfer: json["zero_point_three_gold_transfer"],
-    renownUnlocks: List<RenownUnlock>.from(json["renown_unlocks"].map((x) => RenownUnlock.fromJson(x))),
-    selectedLaunchTrail: json["selected_launch_trail"],
-    selectedLeaderboard: json["selected_leaderboard"],
-    lastMidfightDisconnect: json["last_midfight_disconnect"],
-    genesisAllegianceTime: json["genesis_allegiance_time"],
-    genesisWeeklyPerksClaimItemDemon: json["genesis_weekly_perks_claim_item_demon"],
-    loginMessages: List<dynamic>.from(json["login_messages"].map((x) => x)),
-    hotbarFavorites: List<int>.from(json["hotbar_favorites"].map((x) => x)),
-    reconessenceDay: json["reconessence_day"],
-    chatOptionPlayerChat: json["chat_option_player_chat"],
-    chatOptionMisc: json["chat_option_misc"],
-    chatOptionBounties: json["chat_option_bounties"],
-    chatOptionPrestigeAnnouncements: json["chat_option_prestige_announcements"],
-    chatOptionStreaks: json["chat_option_streaks"],
-    chatOptionKillFeed: json["chat_option_kill_feed"],
-    apolloEnabled: json["apollo_enabled"],
-    zeroPointTwoXp: json["zero_point_two_xp"],
-    lastLycanthropy: json["last_lycanthropy"],
-    recentKills: List<RecentKill>.from(json["recent_kills"].map((x) => RecentKill.fromJson(x))),
-    xp: json["xp"],
-    bounties: List<Bounty>.from(json["bounties"].map((x) => Bounty.fromJson(x))),
-    nightQuestsEnabled: json["night_quests_enabled"],
-    genesisAllegiance: json["genesis_allegiance"],
-    cashDuringPrestige0: json["cash_during_prestige_0"],
-    cashDuringPrestige1: json["cash_during_prestige_1"],
-    unlocks: List<RenownUnlock>.from(json["unlocks"].map((x) => RenownUnlock.fromJson(x))),
-    unlocks1: List<RenownUnlock>.from(json["unlocks_1"].map((x) => RenownUnlock.fromJson(x))),
-  );
+        outgoingOffers:
+            List<dynamic>.from(json["outgoing_offers"].map((x) => x)),
+        contractChoices:
+            List<dynamic>.from(json["contract_choices"].map((x) => x)),
+        lastSave: json["last_save"],
+        hatColor: json["hat_color"],
+        tradeTimestamps: List<int>.from(json["trade_timestamps"].map((x) => x)),
+        impatientEnabled: json["impatient_enabled"],
+        invEnderchest: DeathRecaps.fromJson(json["inv_enderchest"]),
+        invContents: DeathRecaps.fromJson(json["inv_contents"]),
+        invArmor: DeathRecaps.fromJson(json["inv_armor"]),
+        itemStash: DeathRecaps.fromJson(json["item_stash"]),
+        mysticWellItem: DeathRecaps.fromJson(json["mystic_well_item"]),
+        mysticWellPants: DeathRecaps.fromJson(json["mystic_well_pants"]),
+        deathRecaps: DeathRecaps.fromJson(json["death_recaps"]),
+        cash: json["cash"],
+        leaderboardStats: InventoriesClass.fromJson(json["leaderboard_stats"]),
+        genesisSpawnInBase: json["genesis_spawn_in_base"],
+        selectedPerk0: json["selected_perk_0"],
+        selectedPerk1: json["selected_perk_1"],
+        selectedPerk2: json["selected_perk_2"],
+        selectedPerk3: json["selected_perk_3"],
+        lastContract: json["last_contract"],
+        endedContracts: List<EndedContract>.from(
+            json["ended_contracts"].map((x) => EndedContract.fromJson(x))),
+        goldTransactions: List<GoldTransaction>.from(
+            json["gold_transactions"].map((x) => GoldTransaction.fromJson(x))),
+        renown: json["renown"],
+        hatEnabled: json["hat_enabled"],
+        genesisPoints: json["genesis_points"],
+        dropConfirmDisabled: json["drop_confirm_disabled"],
+        prestiges: List<Prestige>.from(
+            json["prestiges"].map((x) => Prestige.fromJson(x))),
+        zeroPointThreeGoldTransfer: json["zero_point_three_gold_transfer"],
+        renownUnlocks: List<RenownUnlock>.from(
+            json["renown_unlocks"].map((x) => RenownUnlock.fromJson(x))),
+        selectedLaunchTrail: json["selected_launch_trail"],
+        selectedLeaderboard: json["selected_leaderboard"],
+        lastMidfightDisconnect: json["last_midfight_disconnect"],
+        genesisAllegianceTime: json["genesis_allegiance_time"],
+        genesisWeeklyPerksClaimItemDemon:
+            json["genesis_weekly_perks_claim_item_demon"],
+        loginMessages: List<dynamic>.from(json["login_messages"].map((x) => x)),
+        hotbarFavorites: List<int>.from(json["hotbar_favorites"].map((x) => x)),
+        reconessenceDay: json["reconessence_day"],
+        chatOptionPlayerChat: json["chat_option_player_chat"],
+        chatOptionMisc: json["chat_option_misc"],
+        chatOptionBounties: json["chat_option_bounties"],
+        chatOptionPrestigeAnnouncements:
+            json["chat_option_prestige_announcements"],
+        chatOptionStreaks: json["chat_option_streaks"],
+        chatOptionKillFeed: json["chat_option_kill_feed"],
+        apolloEnabled: json["apollo_enabled"],
+        zeroPointTwoXp: json["zero_point_two_xp"],
+        lastLycanthropy: json["last_lycanthropy"],
+        recentKills: List<RecentKill>.from(
+            json["recent_kills"].map((x) => RecentKill.fromJson(x))),
+        xp: json["xp"],
+        bounties:
+            List<Bounty>.from(json["bounties"].map((x) => Bounty.fromJson(x))),
+        nightQuestsEnabled: json["night_quests_enabled"],
+        genesisAllegiance: json["genesis_allegiance"],
+        cashDuringPrestige0: json["cash_during_prestige_0"],
+        cashDuringPrestige1: json["cash_during_prestige_1"],
+        unlocks: List<RenownUnlock>.from(
+            json["unlocks"].map((x) => RenownUnlock.fromJson(x))),
+        unlocks1: List<RenownUnlock>.from(
+            json["unlocks_1"].map((x) => RenownUnlock.fromJson(x))),
+      );
 
   Map<String, dynamic> toJson() => {
-    "outgoing_offers": List<dynamic>.from(outgoingOffers.map((x) => x)),
-    "contract_choices": List<dynamic>.from(contractChoices.map((x) => x)),
-    "last_save": lastSave,
-    "hat_color": hatColor,
-    "trade_timestamps": List<dynamic>.from(tradeTimestamps.map((x) => x)),
-    "impatient_enabled": impatientEnabled,
-    "inv_enderchest": invEnderchest.toJson(),
-    "inv_contents": invContents.toJson(),
-    "inv_armor": invArmor.toJson(),
-    "item_stash": itemStash.toJson(),
-    "mystic_well_item": mysticWellItem.toJson(),
-    "mystic_well_pants": mysticWellPants.toJson(),
-    "death_recaps": deathRecaps.toJson(),
-    "cash": cash,
-    "leaderboard_stats": leaderboardStats.toJson(),
-    "genesis_spawn_in_base": genesisSpawnInBase,
-    "selected_perk_0": selectedPerk0,
-    "selected_perk_1": selectedPerk1,
-    "selected_perk_2": selectedPerk2,
-    "selected_perk_3": selectedPerk3,
-    "last_contract": lastContract,
-    "ended_contracts": List<dynamic>.from(endedContracts.map((x) => x.toJson())),
-    "gold_transactions": List<dynamic>.from(goldTransactions.map((x) => x.toJson())),
-    "renown": renown,
-    "hat_enabled": hatEnabled,
-    "genesis_points": genesisPoints,
-    "drop_confirm_disabled": dropConfirmDisabled,
-    "prestiges": List<dynamic>.from(prestiges.map((x) => x.toJson())),
-    "zero_point_three_gold_transfer": zeroPointThreeGoldTransfer,
-    "renown_unlocks": List<dynamic>.from(renownUnlocks.map((x) => x.toJson())),
-    "selected_launch_trail": selectedLaunchTrail,
-    "selected_leaderboard": selectedLeaderboard,
-    "last_midfight_disconnect": lastMidfightDisconnect,
-    "genesis_allegiance_time": genesisAllegianceTime,
-    "genesis_weekly_perks_claim_item_demon": genesisWeeklyPerksClaimItemDemon,
-    "login_messages": List<dynamic>.from(loginMessages.map((x) => x)),
-    "hotbar_favorites": List<dynamic>.from(hotbarFavorites.map((x) => x)),
-    "reconessence_day": reconessenceDay,
-    "chat_option_player_chat": chatOptionPlayerChat,
-    "chat_option_misc": chatOptionMisc,
-    "chat_option_bounties": chatOptionBounties,
-    "chat_option_prestige_announcements": chatOptionPrestigeAnnouncements,
-    "chat_option_streaks": chatOptionStreaks,
-    "chat_option_kill_feed": chatOptionKillFeed,
-    "apollo_enabled": apolloEnabled,
-    "zero_point_two_xp": zeroPointTwoXp,
-    "last_lycanthropy": lastLycanthropy,
-    "recent_kills": List<dynamic>.from(recentKills.map((x) => x.toJson())),
-    "xp": xp,
-    "bounties": List<dynamic>.from(bounties.map((x) => x.toJson())),
-    "night_quests_enabled": nightQuestsEnabled,
-    "genesis_allegiance": genesisAllegiance,
-    "cash_during_prestige_0": cashDuringPrestige0,
-    "cash_during_prestige_1": cashDuringPrestige1,
-    "unlocks": List<dynamic>.from(unlocks.map((x) => x.toJson())),
-    "unlocks_1": List<dynamic>.from(unlocks1.map((x) => x.toJson())),
-  };
+        "outgoing_offers": List<dynamic>.from(outgoingOffers.map((x) => x)),
+        "contract_choices": List<dynamic>.from(contractChoices.map((x) => x)),
+        "last_save": lastSave,
+        "hat_color": hatColor,
+        "trade_timestamps": List<dynamic>.from(tradeTimestamps.map((x) => x)),
+        "impatient_enabled": impatientEnabled,
+        "inv_enderchest": invEnderchest.toJson(),
+        "inv_contents": invContents.toJson(),
+        "inv_armor": invArmor.toJson(),
+        "item_stash": itemStash.toJson(),
+        "mystic_well_item": mysticWellItem.toJson(),
+        "mystic_well_pants": mysticWellPants.toJson(),
+        "death_recaps": deathRecaps.toJson(),
+        "cash": cash,
+        "leaderboard_stats": leaderboardStats.toJson(),
+        "genesis_spawn_in_base": genesisSpawnInBase,
+        "selected_perk_0": selectedPerk0,
+        "selected_perk_1": selectedPerk1,
+        "selected_perk_2": selectedPerk2,
+        "selected_perk_3": selectedPerk3,
+        "last_contract": lastContract,
+        "ended_contracts":
+            List<dynamic>.from(endedContracts.map((x) => x.toJson())),
+        "gold_transactions":
+            List<dynamic>.from(goldTransactions.map((x) => x.toJson())),
+        "renown": renown,
+        "hat_enabled": hatEnabled,
+        "genesis_points": genesisPoints,
+        "drop_confirm_disabled": dropConfirmDisabled,
+        "prestiges": List<dynamic>.from(prestiges.map((x) => x.toJson())),
+        "zero_point_three_gold_transfer": zeroPointThreeGoldTransfer,
+        "renown_unlocks":
+            List<dynamic>.from(renownUnlocks.map((x) => x.toJson())),
+        "selected_launch_trail": selectedLaunchTrail,
+        "selected_leaderboard": selectedLeaderboard,
+        "last_midfight_disconnect": lastMidfightDisconnect,
+        "genesis_allegiance_time": genesisAllegianceTime,
+        "genesis_weekly_perks_claim_item_demon":
+            genesisWeeklyPerksClaimItemDemon,
+        "login_messages": List<dynamic>.from(loginMessages.map((x) => x)),
+        "hotbar_favorites": List<dynamic>.from(hotbarFavorites.map((x) => x)),
+        "reconessence_day": reconessenceDay,
+        "chat_option_player_chat": chatOptionPlayerChat,
+        "chat_option_misc": chatOptionMisc,
+        "chat_option_bounties": chatOptionBounties,
+        "chat_option_prestige_announcements": chatOptionPrestigeAnnouncements,
+        "chat_option_streaks": chatOptionStreaks,
+        "chat_option_kill_feed": chatOptionKillFeed,
+        "apollo_enabled": apolloEnabled,
+        "zero_point_two_xp": zeroPointTwoXp,
+        "last_lycanthropy": lastLycanthropy,
+        "recent_kills": List<dynamic>.from(recentKills.map((x) => x.toJson())),
+        "xp": xp,
+        "bounties": List<dynamic>.from(bounties.map((x) => x.toJson())),
+        "night_quests_enabled": nightQuestsEnabled,
+        "genesis_allegiance": genesisAllegiance,
+        "cash_during_prestige_0": cashDuringPrestige0,
+        "cash_during_prestige_1": cashDuringPrestige1,
+        "unlocks": List<dynamic>.from(unlocks.map((x) => x.toJson())),
+        "unlocks_1": List<dynamic>.from(unlocks1.map((x) => x.toJson())),
+      };
 }
 
 class Bounty {
@@ -2132,18 +2173,18 @@ class Bounty {
   String toRawJson() => json.encode(toJson());
 
   factory Bounty.fromJson(Map<String, dynamic> json) => Bounty(
-    amount: json["amount"],
-    timestamp: json["timestamp"],
-    remainingTicks: json["remainingTicks"],
-    issuer: json["issuer"],
-  );
+        amount: json["amount"],
+        timestamp: json["timestamp"],
+        remainingTicks: json["remainingTicks"],
+        issuer: json["issuer"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "amount": amount,
-    "timestamp": timestamp,
-    "remainingTicks": remainingTicks,
-    "issuer": issuer,
-  };
+        "amount": amount,
+        "timestamp": timestamp,
+        "remainingTicks": remainingTicks,
+        "issuer": issuer,
+      };
 }
 
 class DeathRecaps {
@@ -2155,19 +2196,20 @@ class DeathRecaps {
     this.data,
   });
 
-  factory DeathRecaps.fromRawJson(String str) => DeathRecaps.fromJson(json.decode(str));
+  factory DeathRecaps.fromRawJson(String str) =>
+      DeathRecaps.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory DeathRecaps.fromJson(Map<String, dynamic> json) => DeathRecaps(
-    type: json["type"],
-    data: List<int>.from(json["data"].map((x) => x)),
-  );
+        type: json["type"],
+        data: List<int>.from(json["data"].map((x) => x)),
+      );
 
   Map<String, dynamic> toJson() => {
-    "type": type,
-    "data": List<dynamic>.from(data.map((x) => x)),
-  };
+        "type": type,
+        "data": List<dynamic>.from(data.map((x) => x)),
+      };
 }
 
 class EndedContract {
@@ -2191,31 +2233,32 @@ class EndedContract {
     this.key,
   });
 
-  factory EndedContract.fromRawJson(String str) => EndedContract.fromJson(json.decode(str));
+  factory EndedContract.fromRawJson(String str) =>
+      EndedContract.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory EndedContract.fromJson(Map<String, dynamic> json) => EndedContract(
-    difficulty: json["difficulty"],
-    goldReward: json["gold_reward"],
-    requirements: InventoriesClass.fromJson(json["requirements"]),
-    progress: InventoriesClass.fromJson(json["progress"]),
-    chunkOfVilesReward: json["chunk_of_viles_reward"],
-    completionDate: json["completion_date"],
-    remainingTicks: json["remaining_ticks"],
-    key: json["key"],
-  );
+        difficulty: json["difficulty"],
+        goldReward: json["gold_reward"],
+        requirements: InventoriesClass.fromJson(json["requirements"]),
+        progress: InventoriesClass.fromJson(json["progress"]),
+        chunkOfVilesReward: json["chunk_of_viles_reward"],
+        completionDate: json["completion_date"],
+        remainingTicks: json["remaining_ticks"],
+        key: json["key"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "difficulty": difficulty,
-    "gold_reward": goldReward,
-    "requirements": requirements.toJson(),
-    "progress": progress.toJson(),
-    "chunk_of_viles_reward": chunkOfVilesReward,
-    "completion_date": completionDate,
-    "remaining_ticks": remainingTicks,
-    "key": key,
-  };
+        "difficulty": difficulty,
+        "gold_reward": goldReward,
+        "requirements": requirements.toJson(),
+        "progress": progress.toJson(),
+        "chunk_of_viles_reward": chunkOfVilesReward,
+        "completion_date": completionDate,
+        "remaining_ticks": remainingTicks,
+        "key": key,
+      };
 }
 
 class GoldTransaction {
@@ -2227,19 +2270,21 @@ class GoldTransaction {
     this.timestamp,
   });
 
-  factory GoldTransaction.fromRawJson(String str) => GoldTransaction.fromJson(json.decode(str));
+  factory GoldTransaction.fromRawJson(String str) =>
+      GoldTransaction.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
-  factory GoldTransaction.fromJson(Map<String, dynamic> json) => GoldTransaction(
-    amount: json["amount"],
-    timestamp: json["timestamp"],
-  );
+  factory GoldTransaction.fromJson(Map<String, dynamic> json) =>
+      GoldTransaction(
+        amount: json["amount"],
+        timestamp: json["timestamp"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "amount": amount,
-    "timestamp": timestamp,
-  };
+        "amount": amount,
+        "timestamp": timestamp,
+      };
 }
 
 class Prestige {
@@ -2253,21 +2298,22 @@ class Prestige {
     this.timestamp,
   });
 
-  factory Prestige.fromRawJson(String str) => Prestige.fromJson(json.decode(str));
+  factory Prestige.fromRawJson(String str) =>
+      Prestige.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Prestige.fromJson(Map<String, dynamic> json) => Prestige(
-    index: json["index"],
-    xpOnPrestige: json["xp_on_prestige"],
-    timestamp: json["timestamp"],
-  );
+        index: json["index"],
+        xpOnPrestige: json["xp_on_prestige"],
+        timestamp: json["timestamp"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "index": index,
-    "xp_on_prestige": xpOnPrestige,
-    "timestamp": timestamp,
-  };
+        "index": index,
+        "xp_on_prestige": xpOnPrestige,
+        "timestamp": timestamp,
+      };
 }
 
 class RecentKill {
@@ -2279,19 +2325,20 @@ class RecentKill {
     this.timestamp,
   });
 
-  factory RecentKill.fromRawJson(String str) => RecentKill.fromJson(json.decode(str));
+  factory RecentKill.fromRawJson(String str) =>
+      RecentKill.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory RecentKill.fromJson(Map<String, dynamic> json) => RecentKill(
-    victim: json["victim"],
-    timestamp: json["timestamp"],
-  );
+        victim: json["victim"],
+        timestamp: json["timestamp"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "victim": victim,
-    "timestamp": timestamp,
-  };
+        "victim": victim,
+        "timestamp": timestamp,
+      };
 }
 
 class RenownUnlock {
@@ -2305,21 +2352,22 @@ class RenownUnlock {
     this.key,
   });
 
-  factory RenownUnlock.fromRawJson(String str) => RenownUnlock.fromJson(json.decode(str));
+  factory RenownUnlock.fromRawJson(String str) =>
+      RenownUnlock.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory RenownUnlock.fromJson(Map<String, dynamic> json) => RenownUnlock(
-    tier: json["tier"],
-    acquireDate: json["acquireDate"],
-    key: json["key"],
-  );
+        tier: json["tier"],
+        acquireDate: json["acquireDate"],
+        key: json["key"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "tier": tier,
-    "acquireDate": acquireDate,
-    "key": key,
-  };
+        "tier": tier,
+        "acquireDate": acquireDate,
+        "key": key,
+      };
 }
 
 class Tkr {
@@ -2352,30 +2400,30 @@ class Tkr {
   String toRawJson() => json.encode(toJson());
 
   factory Tkr.fromJson(Map<String, dynamic> json) => Tkr(
-    coins: json["coins"],
-    coinPickups: json["coin_pickups"],
-    laps: json["laps"],
-    wins: json["wins"],
-    boxPickups: json["box_pickups"],
-    bananasSent: json["bananas_sent"],
-    bananasReceived: json["bananas_received"],
-    bananaRatio: json["banana_ratio"],
-    trophies: Trophies.fromJson(json["trophies"]),
-    maps: Maps.fromJson(json["maps"]),
-  );
+        coins: json["coins"],
+        coinPickups: json["coin_pickups"],
+        laps: json["laps"],
+        wins: json["wins"],
+        boxPickups: json["box_pickups"],
+        bananasSent: json["bananas_sent"],
+        bananasReceived: json["bananas_received"],
+        bananaRatio: json["banana_ratio"],
+        trophies: Trophies.fromJson(json["trophies"]),
+        maps: Maps.fromJson(json["maps"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "coins": coins,
-    "coin_pickups": coinPickups,
-    "laps": laps,
-    "wins": wins,
-    "box_pickups": boxPickups,
-    "bananas_sent": bananasSent,
-    "bananas_received": bananasReceived,
-    "banana_ratio": bananaRatio,
-    "trophies": trophies.toJson(),
-    "maps": maps.toJson(),
-  };
+        "coins": coins,
+        "coin_pickups": coinPickups,
+        "laps": laps,
+        "wins": wins,
+        "box_pickups": boxPickups,
+        "bananas_sent": bananasSent,
+        "bananas_received": bananasReceived,
+        "banana_ratio": bananaRatio,
+        "trophies": trophies.toJson(),
+        "maps": maps.toJson(),
+      };
 }
 
 class Maps {
@@ -2398,20 +2446,20 @@ class Maps {
   String toRawJson() => json.encode(toJson());
 
   factory Maps.fromJson(Map<String, dynamic> json) => Maps(
-    retro: Canyon.fromJson(json["retro"]),
-    hypixelgp: Canyon.fromJson(json["hypixelgp"]),
-    junglerush: Canyon.fromJson(json["junglerush"]),
-    olympus: Canyon.fromJson(json["olympus"]),
-    canyon: Canyon.fromJson(json["canyon"]),
-  );
+        retro: Canyon.fromJson(json["retro"]),
+        hypixelgp: Canyon.fromJson(json["hypixelgp"]),
+        junglerush: Canyon.fromJson(json["junglerush"]),
+        olympus: Canyon.fromJson(json["olympus"]),
+        canyon: Canyon.fromJson(json["canyon"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "retro": retro.toJson(),
-    "hypixelgp": hypixelgp.toJson(),
-    "junglerush": junglerush.toJson(),
-    "olympus": olympus.toJson(),
-    "canyon": canyon.toJson(),
-  };
+        "retro": retro.toJson(),
+        "hypixelgp": hypixelgp.toJson(),
+        "junglerush": junglerush.toJson(),
+        "olympus": olympus.toJson(),
+        "canyon": canyon.toJson(),
+      };
 }
 
 class Canyon {
@@ -2430,16 +2478,16 @@ class Canyon {
   String toRawJson() => json.encode(toJson());
 
   factory Canyon.fromJson(Map<String, dynamic> json) => Canyon(
-    games: json["games"],
-    winRatio: json["win_ratio"],
-    trophies: Trophies.fromJson(json["trophies"]),
-  );
+        games: json["games"],
+        winRatio: json["win_ratio"],
+        trophies: Trophies.fromJson(json["trophies"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "games": games,
-    "win_ratio": winRatio,
-    "trophies": trophies.toJson(),
-  };
+        "games": games,
+        "win_ratio": winRatio,
+        "trophies": trophies.toJson(),
+      };
 }
 
 class Trophies {
@@ -2453,21 +2501,22 @@ class Trophies {
     this.bronze,
   });
 
-  factory Trophies.fromRawJson(String str) => Trophies.fromJson(json.decode(str));
+  factory Trophies.fromRawJson(String str) =>
+      Trophies.fromJson(json.decode(str));
 
   String toRawJson() => json.encode(toJson());
 
   factory Trophies.fromJson(Map<String, dynamic> json) => Trophies(
-    gold: json["gold"],
-    silver: json["silver"],
-    bronze: json["bronze"],
-  );
+        gold: json["gold"],
+        silver: json["silver"],
+        bronze: json["bronze"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "gold": gold,
-    "silver": silver,
-    "bronze": bronze,
-  };
+        "gold": gold,
+        "silver": silver,
+        "bronze": bronze,
+      };
 }
 
 class Voting {
@@ -2486,14 +2535,14 @@ class Voting {
   String toRawJson() => json.encode(toJson());
 
   factory Voting.fromJson(Map<String, dynamic> json) => Voting(
-    votesToday: json["votes_today"],
-    totalVotes: json["total_votes"],
-    lastVote: json["last_vote"],
-  );
+        votesToday: json["votes_today"],
+        totalVotes: json["total_votes"],
+        lastVote: json["last_vote"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "votes_today": votesToday,
-    "total_votes": totalVotes,
-    "last_vote": lastVote,
-  };
+        "votes_today": votesToday,
+        "total_votes": totalVotes,
+        "last_vote": lastVote,
+      };
 }

@@ -32,41 +32,39 @@ class _PlayerPageState extends State<PlayerPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(children: <Widget>[
-      HeaderWidget(
-          title: "Player Stats",
-          subtitle: "Search for player stats on Hypixel Network",
-          textFieldHint: "Enter Player Name",
-          onSubmit: (val) {
-            search(context, val);
-          }),
-      if (player != null)
+      body: ListView(children: <Widget>[
+        HeaderWidget(
+            title: "Player Stats",
+            subtitle: "Search for player stats on Hypixel Network",
+            textFieldHint: "Enter Player Name",
+            onSubmit: (val) {
+              search(context, val);
+            }),
+        if (player != null)
+          Container(
+            child: Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15.0),
+                        color: Colors.black26),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[Text(player.username)],
+                      ),
+                    ))),
+          ),
         Container(
-          child: Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Container(
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(15.0),
-                      color: Colors.black26),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text(player.username)
-                      ],
-                    ),
-                  ))),
-        ),
-      Container(
-        height: 30,
-        child: Center(
-          child: Text("Made By Hadi Ka (Nystrex)",
-              style: TextStyle(color: Colors.grey, fontSize: 11)),
-        ),
-      )
-    ]),
-      );
+          height: 30,
+          child: Center(
+            child: Text("Made By Hadi Ka (Nystrex)",
+                style: TextStyle(color: Colors.grey, fontSize: 11)),
+          ),
+        )
+      ]),
+    );
   }
 }

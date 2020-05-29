@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
-class HeaderWidget extends StatelessWidget{
-
+class HeaderWidget extends StatelessWidget {
   final String title;
   final String subtitle;
   final String textFieldHint;
@@ -67,8 +66,7 @@ class HeaderWidget extends StatelessWidget{
                 padding: EdgeInsets.only(left: 15.0),
                 child: Text(
                   'Nypixel - $title',
-                  style:
-                  TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 24.0, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(height: 15.0),
@@ -76,8 +74,7 @@ class HeaderWidget extends StatelessWidget{
                 padding: const EdgeInsets.only(left: 15.0),
                 child: Text(
                   subtitle,
-                  style:
-                  TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(height: 43.0),
@@ -87,13 +84,13 @@ class HeaderWidget extends StatelessWidget{
                   elevation: 8.0,
                   borderRadius: BorderRadius.circular(5.0),
                   child: TextField(
-                      onSubmitted:  onSubmit,
+                      onSubmitted: onSubmit,
                       decoration: InputDecoration(
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.search,
                               color: Colors.red.shade400, size: 30.0),
                           contentPadding:
-                          EdgeInsets.only(left: 15.0, top: 15.0),
+                              EdgeInsets.only(left: 15.0, top: 15.0),
                           hintText: textFieldHint,
                           hintStyle: TextStyle(color: Colors.grey))),
                 ),
