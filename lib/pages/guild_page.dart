@@ -22,7 +22,7 @@ class _GuildPageState extends State<GuildPage> {
   Future<void> search(BuildContext context, String playerName) async {
     setState(() => this.pending = true);
     try {
-      this.guild = await API.getPlayerGuild(playerName);
+      this.guild = await API.getGuild(playerName);
     } catch (e) {
       print(e);
     }

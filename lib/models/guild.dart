@@ -3,7 +3,7 @@ import 'dart:convert';
 class Guild {
   String name;
   String id;
-  String created;
+  int created;
   String tag;
   String tagColor;
   String tagFormatted;
@@ -72,9 +72,9 @@ class Guild {
         "exp_by_game": expByGame,
         "exp_history": expHistory.toJson(),
         "description": description,
-        "preferred_games": List<dynamic>.from(preferredGames.map((x) => x)),
-        "ranks": List<dynamic>.from(ranks.map((x) => x.toJson())),
-        "members": List<dynamic>.from(members.map((x) => x.toJson())),
+        "preferred_games": List<String>.from(preferredGames.map((x) => x)),
+        "ranks": List<Rank>.from(ranks.map((x) => x.toJson())),
+        "members": List<Member>.from(members.map((x) => x.toJson())),
       };
 }
 
@@ -163,7 +163,7 @@ class Rank {
 
   Map<String, dynamic> toJson() => {
         "name": name,
-        "permissions": List<dynamic>.from(permissions.map((x) => x)),
+        "permissions": List<double>.from(permissions.map((x) => x)),
         "default": rankDefault,
         "tag": tag,
         "created": created,

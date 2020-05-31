@@ -6,8 +6,9 @@ class HeaderWidget extends StatelessWidget {
   final String subtitle;
   final String textFieldHint;
   final Function onSubmit;
+  final Widget trailing;
 
-  HeaderWidget({this.title, this.subtitle, this.textFieldHint, this.onSubmit});
+  HeaderWidget({this.title, this.subtitle, this.textFieldHint, this.onSubmit, this.trailing});
 
   @override
   Widget build(BuildContext context) {
@@ -89,6 +90,7 @@ class HeaderWidget extends StatelessWidget {
                           border: InputBorder.none,
                           prefixIcon: Icon(Icons.search,
                               color: Colors.red.shade400, size: 30.0),
+                          suffixIcon: trailing,
                           contentPadding:
                               EdgeInsets.only(left: 15.0, top: 15.0),
                           hintText: textFieldHint,
