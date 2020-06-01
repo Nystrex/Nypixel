@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nypixel/api/api.dart';
 import 'package:nypixel/models/player.dart';
-import 'package:nypixel/utils/HexColor.dart';
 import 'package:nypixel/utils/McColor.dart';
 import 'package:nypixel/widgets/header.dart';
 
@@ -69,9 +68,9 @@ class _PlayerPageState extends State<PlayerPage> {
                                   text: TextSpan(
                                       style: TextStyle(fontSize: 14),
                                       children: [
-                                        CustomText("Name", player.username),
-                                        CustomText("UUID", player.uuid),
-                                        CustomText(
+                                        buildCustomText("Name", player.username),
+                                        buildCustomText("UUID", player.uuid),
+                                        buildCustomText(
                                             "Status",
                                             player.online
                                                 ? "Online"
@@ -80,13 +79,12 @@ class _PlayerPageState extends State<PlayerPage> {
                                             player.online
                                                 ? McColors.green
                                                 : McColors.red),
-                                        CustomRankText(player.rank),
-                                        CustomText(
+                                        buildCustomRankText(player.rank),
+                                        buildCustomText(
                                             "Level",
                                             player.level.toString(),
                                             false,
                                             McColors.green),
-
                                       ]),
                                 ),
                               ],
@@ -94,7 +92,7 @@ class _PlayerPageState extends State<PlayerPage> {
                           )),
                       SizedBox(height: 15),
                       Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
                           Container(
                               decoration: BoxDecoration(
@@ -108,24 +106,25 @@ class _PlayerPageState extends State<PlayerPage> {
                                       text: TextSpan(
                                           style: TextStyle(fontSize: 14),
                                           children: [
-                                            CustomText(
+                                            buildCustomText(
                                                 "Karma",
                                                 player.karma.toString(),
                                                 true,
                                                 McColors.darkPurple),
-                                            CustomText(
+                                            buildCustomText(
                                                 "Achievement Points",
                                                 player.achievementPoints
                                                     .toString()),
-                                            CustomText("Quests Completed",
-                                                player.questsCompleted.toString()),
-                                            CustomText("Gifts Sent",
+                                            buildCustomText(
+                                                "Quests Completed",
+                                                player.questsCompleted
+                                                    .toString()),
+                                            buildCustomText("Gifts Sent",
                                                 player.giftsSent.toString()),
-                                            CustomText(
+                                            buildCustomText(
                                                 "Gifts Received",
                                                 player.giftsReceived.toString(),
                                                 false),
-
                                           ]),
                                     ),
                                   ],
@@ -143,19 +142,19 @@ class _PlayerPageState extends State<PlayerPage> {
                                       text: TextSpan(
                                           style: TextStyle(fontSize: 14),
                                           children: [
-                                            CustomText("Total Kills",
+                                            buildCustomText("Total Kills",
                                                 player.totalKills.toString()),
-                                            CustomText("Total Wins",
+                                            buildCustomText("Total Wins",
                                                 player.totalWins.toString()),
-                                            CustomText(
+                                            buildCustomText(
                                                 "Total Coins",
                                                 player.totalCoins.toString(),
                                                 true,
                                                 McColors.gold),
-                                            CustomText(
+                                            buildCustomText(
                                                 "MC Version", player.mcVersion),
-                                            CustomText(
-                                                "Last Game", player.lastGame, false),
+                                            buildCustomText("Last Game",
+                                                player.lastGame, false),
                                           ]),
                                     ),
                                   ],
@@ -163,7 +162,6 @@ class _PlayerPageState extends State<PlayerPage> {
                               )),
                         ],
                       )
-
                     ])),
               )
             : Text(""),
@@ -179,7 +177,7 @@ class _PlayerPageState extends State<PlayerPage> {
   }
 }
 
-InlineSpan CustomText(String type, String text,
+InlineSpan buildCustomText(String type, String text,
     [bool newLine = true, Color textColor]) {
   return TextSpan(
       text: "$type - ",
@@ -193,7 +191,7 @@ InlineSpan CustomText(String type, String text,
       ]);
 }
 
-InlineSpan CustomRankText(String rank, [bool newLine = true]) {
+InlineSpan buildCustomRankText(String rank, [bool newLine = true]) {
   return TextSpan(
       text: "Rank - ",
       style: TextStyle(color: McColors.yellow),
