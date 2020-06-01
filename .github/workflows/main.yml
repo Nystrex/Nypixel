@@ -1,6 +1,8 @@
 on:
   push:
-name: Test, Build and Release apk
+    tags:
+      - 'v*'
+name: Test, Build and Release App Bundle
 jobs:
   build:
     name: Build APK
