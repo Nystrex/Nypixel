@@ -35,7 +35,7 @@ class _GuildPageState extends State<GuildPage> {
         body: ListView(children: <Widget>[
       HeaderWidget(
           title: "Guild Stats",
-          subtitle: "Search for guild stats on Hypixel Network",
+          subtitle: "Search for any guild stats on Hypixel Network",
           textFieldHint: "Enter Player Name",
           onSubmit: (val) {
             search(context, val);
