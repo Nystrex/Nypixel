@@ -39,7 +39,7 @@ class _PlayerPageState extends State<PlayerPage> {
       body: ListView(children: <Widget>[
         HeaderWidget(
             title: "Player Stats",
-            subtitle: "Search for player stats on Hypixel Network",
+            subtitle: "Search for any player stats on Hypixel Network",
             textFieldHint: "Enter Player Name",
             onSubmit: (val) {
               search(val);
