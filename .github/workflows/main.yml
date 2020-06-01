@@ -24,7 +24,7 @@ jobs:
         ALIAS: ${{ secrets.ALIAS }}
         SIGNING_KEY: key.jks
     - name: Create a Release Bundle
-    - uses: actions/upload-artifact@v1
+      uses: actions/upload-artifact@v1
       with:
         name: release-appbundle
         path: "build/app/outputs/bundle/release/*.aab"
