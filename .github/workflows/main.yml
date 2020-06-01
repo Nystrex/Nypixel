@@ -1,11 +1,9 @@
 on:
   push:
-    tags:
-      - 'v*'
 name: Test, Build and Release App Bundle
 jobs:
   build:
-    name: Build APK
+    name: Build App Bundle
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
