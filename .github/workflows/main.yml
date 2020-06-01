@@ -19,14 +19,14 @@ jobs:
       with:
         channel: 'stable'
     - run: flutter pub get
-    - run: flutter build bundle
+    - run: flutter build appbundle --target-platform android-arm,android-arm64,android-x64
       env:
         KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
         KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         ALIAS: ${{ secrets.ALIAS }}
         SIGNING_KEY: key.jks
     - name: Create a Release Bundle
-      uses: ncipollo/release-action@v1
+    - uses: actions/upload-artifact@v1
       with:
-        artifacts: "build/app/outputs/bundle/release/*.aab"
-        token: ${{ secrets.TOKEN }}
+        name: release-appbundle
+        path: "build/app/outputs/bundle/release/*.aab"
