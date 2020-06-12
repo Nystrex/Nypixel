@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'pages/player_page.dart';
 import 'pages/guild_page.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 void main() {
   runApp(App());
@@ -38,11 +39,14 @@ class _MainState extends State<Main> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-        body: _children[_currentIndex],
+        body: PlayerPage(),
         bottomNavigationBar: BottomNavigationBar(
           onTap: (index) {
             setState(() {
-              _currentIndex = index;
+              //_currentIndex = index;
+              if(index == 1) {
+                Fluttertoast.showToast(msg: "Coming Soon!");
+              }
             });
           },
           currentIndex: _currentIndex,
