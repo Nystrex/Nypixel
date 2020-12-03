@@ -3,6 +3,7 @@ import 'package:nypixel/api/api.dart';
 import 'package:nypixel/models/player.dart';
 import 'package:nypixel/utils/McColor.dart';
 import 'package:nypixel/widgets/header.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class PlayerPage extends StatefulWidget {
   @override
@@ -13,12 +14,19 @@ class _PlayerPageState extends State<PlayerPage> {
   Player player;
   bool pending = false;
   TextEditingController queryController;
+  String dfltUser;
 
   @override
   void initState() {
     super.initState();
-    this.queryController = TextEditingController()..text = "";
-    search("Nystrex");
+    getValue();
+  }
+
+  getValue() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    search(prefs.getString('default_user').isEmpty
+        ? "Nystrex"
+        : prefs.getString("default_user"));
   }
 
   Future<void> search(String playerName) async {
@@ -37,38 +45,42 @@ class _PlayerPageState extends State<PlayerPage> {
     return Scaffold(
       body: ListView(children: <Widget>[
         HeaderWidget(
-            title: "Player Stats",
-            subtitle: "Search for any player stats on Hypixel Network",
-            textFieldHint: "Enter Player Name",
-            onSubmit: (val) {
-              search(val);
-            },
-            trailing: player != null
-                ? Image.network(
-                    'https://visage.surgeplay.com/head/512/${player.uuid}',
-                    scale: 11,
-                  )
-                : Image.network("https://visage.surgeplay.com/head/512/X-Steve",
-                    scale: 11)),
+          title: "Player Stats",
+          subtitle: "Search for any player stats on Hypixel Network",
+          textFieldHint: "Enter Player Name",
+          onSubmit: (val) {
+            search(val);
+          },
+          trailing: player != null
+              ? Image.network(
+                  'https://visage.surgeplay.com/head/512/${player.uuid}',
+                  scale: 11,
+                )
+              : Image.network("https://visage.surgeplay.com/head/512/X-Steve",
+                  scale: 11),
+          profile: getValue,
+          username: player != null ? player.username : "Nystrex",
+        ),
         player != null
             ? Container(
                 child: Padding(
-                    padding: const EdgeInsets.all(15.0),
+                    padding: const EdgeInsets.all(10.0),
                     child: Column(children: [
                       Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(15.0),
+                              borderRadius: BorderRadius.circular(10.0),
                               color: Colors.black26),
                           child: Padding(
-                            padding: const EdgeInsets.all(15.0),
+                            padding: const EdgeInsets.all(10.0),
                             child: Stack(
                               children: <Widget>[
                                 RichText(
                                   text: TextSpan(
                                       style: TextStyle(fontSize: 14),
                                       children: [
-                                        buildCustomText("Name", player.username),
+                                        buildCustomText(
+                                            "Name", player.username),
                                         buildCustomText("UUID", player.uuid),
                                         buildCustomText(
                                             "Status",
@@ -92,14 +104,14 @@ class _PlayerPageState extends State<PlayerPage> {
                           )),
                       SizedBox(height: 15),
                       Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: <Widget>[
                           Container(
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
+                                  borderRadius: BorderRadius.circular(10.0),
                                   color: Colors.black26),
                               child: Padding(
-                                padding: const EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Stack(
                                   children: <Widget>[
                                     RichText(
@@ -132,10 +144,10 @@ class _PlayerPageState extends State<PlayerPage> {
                               )),
                           Container(
                               decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(15.0),
+                                  borderRadius: BorderRadius.circular(10.0),
                                   color: Colors.black26),
                               child: Padding(
-                                padding: const EdgeInsets.all(15.0),
+                                padding: const EdgeInsets.all(10.0),
                                 child: Stack(
                                   children: <Widget>[
                                     RichText(

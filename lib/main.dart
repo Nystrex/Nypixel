@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'pages/player_page.dart';
-import 'pages/guild_page.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+
+import 'pages/guild_page.dart';
+import 'pages/player_page.dart';
 
 void main() {
   runApp(App());
@@ -53,10 +54,10 @@ class _MainState extends State<Main> {
           items: [
             new BottomNavigationBarItem(
               icon: Icon(Icons.person),
-              title: Text('Player'),
+              label:'Player',
             ),
             new BottomNavigationBarItem(
-                icon: Icon(Icons.group), title: Text('Guild'))
+                icon: Icon(Icons.group), label: 'Guild')
           ],
         ));
   }
